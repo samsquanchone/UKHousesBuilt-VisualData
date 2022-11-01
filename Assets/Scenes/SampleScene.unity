@@ -603,27 +603,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1198508326}
-        m_TargetAssemblyTypeName: DataToVFX, Assembly-CSharp
-        m_MethodName: SetParticleAmount
-        m_Mode: 4
+      - m_Target: {fileID: 1198508328}
+        m_TargetAssemblyTypeName: DataManager, Assembly-CSharp
+        m_MethodName: GetNumberOfHousesBuiltValuesForYear
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 5000
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1198508326}
-        m_TargetAssemblyTypeName: DataToVFX, Assembly-CSharp
-        m_MethodName: SetParticleColor
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 190
+          m_IntArgument: 2012
+          m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -1536,6 +1524,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1198508327}
   - component: {fileID: 1198508326}
+  - component: {fileID: 1198508328}
   m_Layer: 0
   m_Name: UiManager
   m_TagString: Untagged
@@ -1570,6 +1559,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1198508328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198508325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c156130e11ce2db47b89b98f474a5ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1327395485
 GameObject:
   m_ObjectHideFlags: 0
@@ -1654,27 +1655,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1198508326}
-        m_TargetAssemblyTypeName: DataToVFX, Assembly-CSharp
-        m_MethodName: SetParticleAmount
-        m_Mode: 4
+      - m_Target: {fileID: 1198508328}
+        m_TargetAssemblyTypeName: DataManager, Assembly-CSharp
+        m_MethodName: GetNumberOfHousesBuiltValuesForYear
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 10000
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1198508326}
-        m_TargetAssemblyTypeName: DataToVFX, Assembly-CSharp
-        m_MethodName: SetParticleColor
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 650
+          m_IntArgument: 2014
+          m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -1800,27 +1789,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1198508326}
-        m_TargetAssemblyTypeName: DataToVFX, Assembly-CSharp
-        m_MethodName: SetParticleAmount
-        m_Mode: 4
+      - m_Target: {fileID: 1198508328}
+        m_TargetAssemblyTypeName: DataManager, Assembly-CSharp
+        m_MethodName: GetNumberOfHousesBuiltValuesForYear
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 1000
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1198508326}
-        m_TargetAssemblyTypeName: DataToVFX, Assembly-CSharp
-        m_MethodName: SetParticleColor
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 20
+          m_IntArgument: 2010
+          m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -2201,27 +2178,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1198508326}
-        m_TargetAssemblyTypeName: DataToVFX, Assembly-CSharp
-        m_MethodName: SetParticleAmount
-        m_Mode: 4
+      - m_Target: {fileID: 1198508328}
+        m_TargetAssemblyTypeName: DataManager, Assembly-CSharp
+        m_MethodName: GetNumberOfHousesBuiltValuesForYear
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 4000
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1198508326}
-        m_TargetAssemblyTypeName: DataToVFX, Assembly-CSharp
-        m_MethodName: SetParticleColor
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 114
+          m_IntArgument: 2011
+          m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -2594,27 +2559,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1198508326}
-        m_TargetAssemblyTypeName: DataToVFX, Assembly-CSharp
-        m_MethodName: SetParticleAmount
-        m_Mode: 4
+      - m_Target: {fileID: 1198508328}
+        m_TargetAssemblyTypeName: DataManager, Assembly-CSharp
+        m_MethodName: GetNumberOfHousesBuiltValuesForYear
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 6000
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1198508326}
-        m_TargetAssemblyTypeName: DataToVFX, Assembly-CSharp
-        m_MethodName: SetParticleColor
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 350
+          m_IntArgument: 2013
+          m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
