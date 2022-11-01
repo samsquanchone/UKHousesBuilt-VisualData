@@ -31,7 +31,7 @@ public class DataToVFX : MonoBehaviour
     {
 
 
-        for (int i = 0; i <= numberOfHouses.Length; i++)
+        for (int i = 0; i < numberOfHouses.Length; i++)
         { //Getting all objects that are tagged with VFX and storing them in a gameobject array
              objects[i].GetComponent<VisualEffect>().SendEvent("Stop");
             //    vfx.SetFloat("NumberOfHouses", 0); //Sets a property in the VFX graph that sets the number of particles to spawn (number of houses built for year)

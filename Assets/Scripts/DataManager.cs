@@ -29,11 +29,11 @@ public class DataManager : MonoBehaviour
     }
 
 
-    public void GetNumberOfHousesBuiltValuesForYear(int year)
+    public void GetNumberOfHousesBuiltValuesForYear(float year)
     {
          float[] values;
 
-         countrys.TryGetValue(year, out values); //Set local array values to values for the year 
+         countrys.TryGetValue((int)year, out values); //Set local array values to values for the year 
 
          for(int i = 0; i < values.Length; i++) //Iterate over array (number of values for that year)
         {
