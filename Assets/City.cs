@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class migration : MonoBehaviour
+public class City : MonoBehaviour
 {
     [SerializeField] private int numberOfMigrators = default; 
     [SerializeField] private GameObject personPrefab;
@@ -12,6 +12,11 @@ public class migration : MonoBehaviour
     void Start()
     {
         
+    }
+
+    void SetAverageHousePrice()
+    {
+
     }
 
     void SpawnSuburbs()
