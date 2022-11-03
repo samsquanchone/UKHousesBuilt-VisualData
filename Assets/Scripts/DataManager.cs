@@ -5,8 +5,13 @@ using UnityEngine;
 
 public class DataManager : MonoBehaviour
 {
+   // [SerializeField] private housesBuiltJSON;
+
     //Dictionary float index's: 0: England, 1: Scotland
-    Dictionary<int, float[]> countrys = new Dictionary<int, float[]>();
+        public GenericDictionary<int, float[]> housesBuiltDictionary;
+
+
+        Dictionary<int, float[]> countrys = new Dictionary<int, float[]>();
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +34,7 @@ public class DataManager : MonoBehaviour
 
     }
 
-
+    //Look up getRandomPoint on mesh github for particle spawning
     public void GetNumberOfHousesBuiltValuesForYear(float year)
     {
         float[] values;

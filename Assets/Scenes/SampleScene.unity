@@ -1568,16 +1568,16 @@ MonoBehaviour:
   m_FillRect: {fileID: 669562238}
   m_HandleRect: {fileID: 2131940367}
   m_Direction: 0
-  m_MinValue: 1
-  m_MaxValue: 11
+  m_MinValue: 2010
+  m_MaxValue: 2020
   m_WholeNumbers: 1
-  m_Value: 1
+  m_Value: 2010
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1198508326}
-        m_TargetAssemblyTypeName: DataToVFX, Assembly-CSharp
-        m_MethodName: SetParticleAmount
+      - m_Target: {fileID: 1198508328}
+        m_TargetAssemblyTypeName: DataManager, Assembly-CSharp
+        m_MethodName: GetNumberOfHousesBuiltValuesForYear
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1788,7 +1788,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1198508325}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7021362b85671d4dac8a289c14b47c4, type: 3}
+  m_Script: {fileID: 11500000, guid: 985437f9b67e19541aeac469e31bef75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1198508327
