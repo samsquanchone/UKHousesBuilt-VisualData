@@ -7,6 +7,8 @@ public class City : MonoBehaviour
     [SerializeField] private int numberOfMigrators = default; 
     [SerializeField] private GameObject personPrefab;
 
+    [SerializeField] private GameObject suburbPrefab;
+
     [SerializeField] private List<GameObject> suburbs = new List<GameObject>();
 
     void Start()
@@ -19,8 +21,10 @@ public class City : MonoBehaviour
 
     }
 
+    [ContextMenu("Spawn Suburb")]
     void SpawnSuburbs()
     {
+        GameObject suburb = Instantiate(suburbPrefab, this.transform.position, Quaternion.identity);
 
     }
 
