@@ -9,10 +9,14 @@ public class CameraControl : MonoBehaviour
     private float sensitivity = 2f;
     private Vector3 newPosition = Vector3.zero;
     private float smoothFactor = 0.05f;
-    private float zoomLimit = 10f;
+    private float zoomInLimit = -3f;
+    private float zoomOutLimit = -18f;
+
+    //public Transform cube;
     void Start()
     {
         newPosition = transform.position;
+        //Invoke(nameof(Test), 5f);
     }
 
     void Update()
@@ -34,6 +38,17 @@ public class CameraControl : MonoBehaviour
             newPosition += (new Vector3(0, speed * Time.deltaTime, 0));
         }
         newPosition += new Vector3(0, 0, Input.mouseScrollDelta.y * sensitivity);
+        newPosition.z = Mathf.Clamp(newPosition.z, zoomOutLimit, zoomInLimit);
         transform.position = Vector3.Lerp(transform.position, newPosition, smoothFactor);
     }
+
+    public void FocusOn(Transform t)
+    {
+        newPosition = new Vector3(t.position.x, t.position.y, -10f);
+    }
+
+    //void Test()
+    //{
+    //    FocusOn(cube);
+    //}
 }
