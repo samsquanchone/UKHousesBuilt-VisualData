@@ -10,11 +10,11 @@ public class PopulationMigration : MonoBehaviour
     [SerializeField] private Transform goal = null;
     [SerializeField] private float goalSuccessDistance = 1f;
 
-    NavMeshAgent agent;
+    [SerializeField] private NavMeshAgent agent;
 
     void Start()
-    {
-
+    {   
+        Migrate();
     }
 
     public void Migrate()
@@ -27,6 +27,7 @@ public class PopulationMigration : MonoBehaviour
 
     void Update()
     {
+        
         if (Vector3.Distance(agent.transform.position, goal.position) <= goalSuccessDistance)
         {
             Destroy(this.gameObject);
