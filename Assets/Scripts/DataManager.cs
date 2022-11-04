@@ -6,16 +6,23 @@ using UnityEngine;
 public class DataManager : MonoBehaviour
 {
     public static DataManager instance => m_Instance;
-    private static DataManager m_Instance;
+    private static DataManager m_Instance; 
     //Dictionary float index's: 0: England, 1: Scotland
     //public GenericDictionary<int, float[]> housesBuiltDictionary;
     public GenericDictionary<int, float[]> houseDevelopedByRegion;
     public GenericDictionary<int, float[]> housePriceByRegion;
+    private float[] values;
 
-    void Start()
+    void Awake()
     {
+        m_Instance = this;
         LoadDataFromFile(houseDevelopedByRegion, "HouseDevelop.csv");
         LoadDataFromFile(housePriceByRegion, "HousePrices-UkRegions.csv");
+    }
+    void Start()
+    {
+        //LoadDataFromFile(houseDevelopedByRegion, "HouseDevelop.csv");
+        //LoadDataFromFile(housePriceByRegion, "HousePrices-UkRegions.csv");
     }
 
     //Look up getRandomPoint on mesh github for particle spawning
@@ -68,4 +75,16 @@ public class DataManager : MonoBehaviour
         }
         sr.Close();
     }
+
+    /*public float GetSpecificValue(float year, int index)
+    {
+        if (housePriceByRegion.TryGetValue((int)year, out values)) 
+            {
+
+            Debug.Log("Hello");
+             
+            }
+
+    }
+    */
 }

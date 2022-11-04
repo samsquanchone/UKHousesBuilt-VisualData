@@ -2748,6 +2748,7 @@ MonoBehaviour:
   - {fileID: 856106964}
   - {fileID: 1779113130}
   cityText: {fileID: 1738880487}
+  cityAvrgPriceText: {fileID: 1747323437}
   personNameText: {fileID: 1917918334}
   personSalaryText: {fileID: 1164217817}
   textUINames:
@@ -7764,6 +7765,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c156130e11ce2db47b89b98f474a5ead, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  houseDevelopedByRegion:
+    list: []
+    keyCollision: 0
   housePriceByRegion:
     list: []
     keyCollision: 0
@@ -9102,7 +9106,7 @@ MonoBehaviour:
   m_MinValue: 2010
   m_MaxValue: 2020
   m_WholeNumbers: 1
-  m_Value: 2017
+  m_Value: 2010
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
