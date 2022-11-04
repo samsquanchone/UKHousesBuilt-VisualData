@@ -71,7 +71,7 @@ public class MouseClick : MonoBehaviour
 
      void SetCityDataUI(string name, float[] cityDataValues,  float [] averageValues, int index)
     {
-        cityText.text = "City: " + name;
+        cityText.text = name;
         cityAvrgPriceText.text = "Average house price: " + "£" + averageValues[index];
         if (cityDataValues != null)
         {
