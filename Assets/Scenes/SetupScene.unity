@@ -1995,8 +1995,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf941e1cb9d9bb8449cd6efb83b94765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputField: {fileID: 166268470}
+  input_max_population: {fileID: 166268470}
+  input_min_salary: {fileID: 1912044370}
+  input_max_salary: {fileID: 2104605386}
   max_population: 
+  min_salary: 
+  max_salary: 
 --- !u!4 &1874754779
 Transform:
   m_ObjectHideFlags: 0

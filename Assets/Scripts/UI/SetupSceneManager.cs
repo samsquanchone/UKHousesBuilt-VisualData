@@ -7,9 +7,15 @@ using UnityEngine.SceneManagement;
 public class SetupSceneManager : MonoBehaviour
 {
     public static SetupSceneManager ssmInstance;
-    public TMP_InputField inputField;
+    public TMP_InputField input_max_population;
+    public TMP_InputField input_min_salary;
+    public TMP_InputField input_max_salary;
+
 
     public string max_population;
+    public string min_salary;
+    public string max_salary;
+
 
 
     private void Awake()
@@ -27,7 +33,11 @@ public class SetupSceneManager : MonoBehaviour
 
     public void SetupDataInput()
     {
-        max_population = inputField.text;
+        max_population = input_max_population.text;
+        min_salary = input_min_salary.text;
+        max_salary = input_max_salary.text;
+        
+
         SceneManager.LoadSceneAsync("MajorCities");
 
     }
