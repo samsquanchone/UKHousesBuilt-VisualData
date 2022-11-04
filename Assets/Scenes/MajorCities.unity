@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17980957, g: 0.17980957, b: 0.17980957, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -173,8 +173,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Mariam
   - Arnold
@@ -562,8 +560,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Milton
   - Aiguo
@@ -843,8 +839,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Zara
   - Tyler
@@ -1366,8 +1360,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Mariam
   - Arnold
@@ -1462,8 +1454,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Zara
   - Tyler
@@ -1632,8 +1622,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Milton
   - Aiguo
@@ -1802,8 +1790,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Charles
   - Beth
@@ -2083,8 +2069,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Ben
   - Aaron
@@ -2253,8 +2237,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Zara
   - Tyler
@@ -2423,8 +2405,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Ben
   - Aaron
@@ -2593,8 +2573,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Mariam
   - Arnold
@@ -2958,8 +2936,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Charles
   - Beth
@@ -3152,8 +3128,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Mariam
   - Arnold
@@ -3362,8 +3336,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Mariam
   - Arnold
@@ -3532,8 +3504,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Charles
   - Beth
@@ -3950,8 +3920,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Lara
   - Sam
@@ -4130,11 +4098,11 @@ RectTransform:
   m_Father: {fileID: 47137608}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 180, y: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 601, y: 0}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!1 &903403166
 GameObject:
   m_ObjectHideFlags: 0
@@ -4261,8 +4229,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Zara
   - Tyler
@@ -4490,11 +4456,11 @@ RectTransform:
   m_Father: {fileID: 47137608}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 130, y: 215}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 130, y: -12}
   m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1025425363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4820,8 +4786,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Milton
   - Aiguo
@@ -4990,8 +4954,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Ben
   - Aaron
@@ -5430,8 +5392,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Charles
   - Beth
@@ -5772,8 +5732,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Charles
   - Beth
@@ -5926,11 +5884,11 @@ RectTransform:
   m_Father: {fileID: 47137608}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -91, y: 0}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -621, y: 0}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 0.5}
 --- !u!1 &1291490178
 GameObject:
   m_ObjectHideFlags: 0
@@ -6258,8 +6216,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Charles
   - Beth
@@ -6428,8 +6384,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Lara
   - Sam
@@ -6598,8 +6552,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Milton
   - Aiguo
@@ -6768,8 +6720,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Lara
   - Sam
@@ -6938,8 +6888,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Mariam
   - Arnold
@@ -7353,8 +7301,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Lara
   - Sam
@@ -7756,8 +7702,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Zara
   - Tyler
@@ -8037,8 +7981,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Milton
   - Aiguo
@@ -8738,8 +8680,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Lara
   - Sam
@@ -9343,8 +9283,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Ben
   - Aaron
@@ -9617,8 +9555,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Ben
   - Aaron
@@ -9787,8 +9723,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Zara
   - Tyler
@@ -9957,8 +9891,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Ben
   - Aaron
@@ -10238,8 +10170,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Milton
   - Aiguo
@@ -10678,8 +10608,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salary: 0
-  minSalary: 20000
-  maxSalary: 100000
   names:
   - Lara
   - Sam
@@ -10828,6 +10756,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   display_max_population: {fileID: 1190165357}
+  minSalary: 0
+  maxSalary: 0
 --- !u!4 &2114364304
 Transform:
   m_ObjectHideFlags: 0
