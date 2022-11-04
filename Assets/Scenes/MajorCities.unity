@@ -2911,6 +2911,7 @@ GameObject:
   m_Component:
   - component: {fileID: 641880667}
   - component: {fileID: 641880666}
+  - component: {fileID: 641880668}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -2930,6 +2931,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb3530b3b76bf741b2a27af77075200, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cityDataText:
+  - {fileID: 1747323437}
+  - {fileID: 2082546585}
+  - {fileID: 856106964}
+  - {fileID: 1779113130}
+  cityText: {fileID: 1738880487}
+  textUINames:
+  - 'Average House Price: '
+  - 'Average Flat Price: '
+  - 'Average Semi Detached Price:'
+  - 'Average Detached Price: '
 --- !u!4 &641880667
 Transform:
   m_ObjectHideFlags: 0
@@ -2945,6 +2957,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &641880668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641880665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 985437f9b67e19541aeac469e31bef75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &653356735
 GameObject:
   m_ObjectHideFlags: 0
@@ -6860,7 +6884,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -162.53476, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

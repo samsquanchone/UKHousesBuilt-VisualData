@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class MouseClick : MonoBehaviour
 {
     private float[] values;
     private float setYear = 2010;
+
+    public TMP_Text[] cityDataText;
+    public TMP_Text cityText;
+    [SerializeField] private string[] textUINames;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,10 +32,14 @@ public class MouseClick : MonoBehaviour
                     Debug.Log(hit.transform.name);
                     //GetData of city 
                     hit.transform.gameObject.GetComponent<CityPrices>().cityData.cityDataByYear.TryGetValue((int)setYear, out values);
-                    for (int i = 0; i < values.Length; i++) //Iterate over array (number of values for that year)
+                    if (values != null)
                     {
-                        Debug.Log(hit.transform.name + " values:" + values[i]);
+                        for (int i = 0; i < values.Length; i++) //Iterate over array (number of values for that year)
+                        {
+                            Debug.Log(hit.transform.name + " values:" + values[i]);
+                        }
                     }
+                    SetCityDataUI(hit.transform.name, values);
                    
                 }
             }
@@ -42,4 +51,19 @@ public class MouseClick : MonoBehaviour
         setYear = year;
         Debug.Log(year);
     }
+
+     void SetCityDataUI(string name, float[] cityDataValues)
+    {
+        cityText.text = "City: " + name;
+
+        if (cityDataValues != null)
+        {
+            for (int i = 0; i < cityDataValues.Length; i++)
+            {
+                cityDataText[i].text = textUINames[i] + "£" + cityDataValues[i];
+            }
+        }
+       
+    }
+
 }
