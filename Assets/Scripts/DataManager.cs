@@ -7,11 +7,13 @@ public class DataManager : MonoBehaviour
 {
     //Dictionary float index's: 0: England, 1: Scotland
     //public GenericDictionary<int, float[]> housesBuiltDictionary;
+    public GenericDictionary<int, float[]> houseDevelopedByRegion;
     public GenericDictionary<int, float[]> housePriceByRegion;
 
     void Start()
     {
-        LoadDataFromFile(housePriceByRegion, "HouseDevelop.csv");
+        LoadDataFromFile(houseDevelopedByRegion, "HouseDevelop.csv");
+        LoadDataFromFile(housePriceByRegion, "HousePrices-UkRegions.csv");
     }
 
     //Look up getRandomPoint on mesh github for particle spawning
