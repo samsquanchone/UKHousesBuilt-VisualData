@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class DataManager : MonoBehaviour
 {
+    public static DataManager instance => m_Instance;
+    private static DataManager m_Instance;
     //Dictionary float index's: 0: England, 1: Scotland
     //public GenericDictionary<int, float[]> housesBuiltDictionary;
     public GenericDictionary<int, float[]> houseDevelopedByRegion;
