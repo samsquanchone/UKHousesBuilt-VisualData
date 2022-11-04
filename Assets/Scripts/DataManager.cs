@@ -12,7 +12,7 @@ public class DataManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        LoadDataFromFile(housePriceByRegion);
+        LoadDataFromFile(housePriceByRegion, "HouseDevelop.csv");
     }
 
     //Look up getRandomPoint on mesh github for particle spawning
@@ -31,17 +31,17 @@ public class DataManager : MonoBehaviour
     }*/
 
     StreamReader sr;
-    private void LoadDataFromFile(GenericDictionary<int, float[]> dictionary)
+    private void LoadDataFromFile(GenericDictionary<int, float[]> dictionary, string fileName)
     {
         //Dictionary<int, float[]> countryHousingDictionary = new Dictionary<int, float[]>();
-        string path = (Application.streamingAssetsPath + "/HouseDevelop.csv");
+        string path = (Application.streamingAssetsPath + "/"+fileName);
         Debug.Log(path);
         if (sr != null)
             sr.Close();
         sr = new StreamReader(path);
-        string line = sr.ReadLine();
         while (!sr.EndOfStream)
         {
+            string line = sr.ReadLine();
             Debug.Log("LINE :: " + line);
             if (!string.IsNullOrEmpty(line))
             {
