@@ -5,6 +5,7 @@ using UnityEngine;
 public class MouseClick : MonoBehaviour
 {
     private float[] values;
+    private float setYear = 2010;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +26,7 @@ public class MouseClick : MonoBehaviour
                 {
                     Debug.Log(hit.transform.name);
                     //GetData of city 
-                    hit.transform.gameObject.GetComponent<CityPrices>().cityData.cityDataByYear.TryGetValue((int)2010, out values);
+                    hit.transform.gameObject.GetComponent<CityPrices>().cityData.cityDataByYear.TryGetValue((int)setYear, out values);
                     for (int i = 0; i < values.Length; i++) //Iterate over array (number of values for that year)
                     {
                         Debug.Log(hit.transform.name + " values:" + values[i]);
@@ -34,5 +35,11 @@ public class MouseClick : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void SetYear(float year)
+    {
+        setYear = year;
+        Debug.Log(year);
     }
 }
