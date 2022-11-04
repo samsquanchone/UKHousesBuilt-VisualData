@@ -10,6 +10,10 @@ public class MouseClick : MonoBehaviour
 
     public TMP_Text[] cityDataText;
     public TMP_Text cityText;
+
+    public TMP_Text personNameText;
+    public TMP_Text personSalaryText;
+
     [SerializeField] private string[] textUINames;
     // Start is called before the first frame update
     void Start()
@@ -40,7 +44,12 @@ public class MouseClick : MonoBehaviour
                         }
                     }
                     SetCityDataUI(hit.transform.name, values);
-                   
+
+                }
+
+                else if (hit.transform.CompareTag("Person"))
+                {
+                    SetPersonDataUI(hit.transform.gameObject.GetComponent<PersonData>().name, hit.transform.gameObject.GetComponent<PersonData>().salary);
                 }
             }
         }
@@ -64,6 +73,12 @@ public class MouseClick : MonoBehaviour
             }
         }
        
+    }
+
+    void SetPersonDataUI(string name, float salary)
+    {
+        personNameText.text = name;
+        personSalaryText.text = "£" + salary;
     }
 
 }
