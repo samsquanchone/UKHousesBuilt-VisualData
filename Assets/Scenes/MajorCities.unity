@@ -2750,6 +2750,7 @@ MonoBehaviour:
   - {fileID: 856106964}
   - {fileID: 1779113130}
   cityText: {fileID: 1738880487}
+  cityAvrgPriceText: {fileID: 1747323437}
   personNameText: {fileID: 1917918334}
   personSalaryText: {fileID: 1164217817}
   textUINames:

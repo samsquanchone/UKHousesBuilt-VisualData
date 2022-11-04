@@ -6,6 +6,7 @@ using UnityEngine;
 public class CityData : ScriptableObject
 {
     public GenericDictionary<int, float[]> cityDataByYear;
+    public int dataIndex;
 
 
 }

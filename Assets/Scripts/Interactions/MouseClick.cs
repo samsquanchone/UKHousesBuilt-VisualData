@@ -6,10 +6,12 @@ using TMPro;
 public class MouseClick : MonoBehaviour
 {
     private float[] values;
+    private float[] price;
     private float setYear = 2010;
 
     public TMP_Text[] cityDataText;
     public TMP_Text cityText;
+    public TMP_Text cityAvrgPriceText;
 
     public TMP_Text personNameText;
     public TMP_Text personSalaryText;
@@ -43,7 +45,13 @@ public class MouseClick : MonoBehaviour
                             Debug.Log(hit.transform.name + " values:" + values[i]);
                         }
                     }
-                    SetCityDataUI(hit.transform.name, values);
+                    if (DataManager.instance.housePriceByRegion.TryGetValue((int)setYear, out price))
+                    {
+
+                        SetCityDataUI(hit.transform.name, values, price, hit.transform.gameObject.GetComponent<CityPrices>().cityData.dataIndex);
+
+                    }
+                   
 
                 }
 
@@ -61,10 +69,10 @@ public class MouseClick : MonoBehaviour
         Debug.Log(year);
     }
 
-     void SetCityDataUI(string name, float[] cityDataValues)
+     void SetCityDataUI(string name, float[] cityDataValues,  float [] averageValues, int index)
     {
-        cityText.text = "City: " + name;
-
+        cityText.text = name;
+        cityAvrgPriceText.text = "Average house price: " + "£" + averageValues[index];
         if (cityDataValues != null)
         {
             for (int i = 0; i < cityDataValues.Length; i++)
