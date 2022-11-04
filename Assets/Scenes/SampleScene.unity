@@ -1175,6 +1175,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
+  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1373,6 +1374,18 @@ MonoBehaviour:
       enableFptlForForwardOpaque: 0
       enableBigTilePrepass: 0
       isFptlEnabled: 0
+--- !u!114 &963194230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0ee82eeca0c6724f8723f08564cd881, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &968858325
 GameObject:
   m_ObjectHideFlags: 0
@@ -1818,6 +1831,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c156130e11ce2db47b89b98f474a5ead, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  housePriceByRegion:
+    list: []
+    keyCollision: 0
+  housesBuiltDictionary:
+    list: []
+    keyCollision: 0
 --- !u!1 &1327395485
 GameObject:
   m_ObjectHideFlags: 0
