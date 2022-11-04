@@ -8332,14 +8332,14 @@ MonoBehaviour:
   m_MinValue: 2010
   m_MaxValue: 2020
   m_WholeNumbers: 1
-  m_Value: 2010
+  m_Value: 2017
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 641880666}
         m_TargetAssemblyTypeName: MouseClick, Assembly-CSharp
         m_MethodName: SetYear
-        m_Mode: 4
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
