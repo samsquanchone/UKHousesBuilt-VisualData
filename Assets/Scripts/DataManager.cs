@@ -5,14 +5,30 @@ using UnityEngine;
 
 public class DataManager : MonoBehaviour
 {
+    public static DataManager instance  => m_Instance;
+    private static DataManager m_Instance;
     //Dictionary float index's: 0: England, 1: Scotland
     //public GenericDictionary<int, float[]> housesBuiltDictionary;
     public GenericDictionary<int, float[]> housePriceByRegion;
 
+<<<<<<< Updated upstream
     // Start is called before the first frame update
     void Start()
     {
         LoadDataFromFile(housePriceByRegion);
+=======
+    private float[] values;
+
+    void Awake()
+    {
+        m_Instance = this;
+    }
+    void Start()
+    {
+        
+        LoadDataFromFile(houseDevelopedByRegion, "HouseDevelop.csv");
+        LoadDataFromFile(housePriceByRegion, "HousePrices-UkRegions.csv");
+>>>>>>> Stashed changes
     }
 
     //Look up getRandomPoint on mesh github for particle spawning
@@ -64,5 +80,22 @@ public class DataManager : MonoBehaviour
             Debug.Log("DICTIONARY :: " + dictionary.Count);
         }
         sr.Close();
+    }
+
+    public float GetSpecificValue(float year, int index)
+    {
+        Debug.Log("Hey hey " + year);
+        bool hasValue = housePriceByRegion.TryGetValue(2012, out values);
+        if(hasValue)
+        {
+            float value;
+            Debug.Log("shiiii" + values[2]);
+            value = values[index];
+            return value;
+
+        }
+
+        return 5;
+
     }
 }

@@ -2720,6 +2720,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 641880667}
+  - component: {fileID: 641880670}
   - component: {fileID: 641880666}
   - component: {fileID: 641880668}
   - component: {fileID: 641880669}
@@ -2748,13 +2749,13 @@ MonoBehaviour:
   - {fileID: 856106964}
   - {fileID: 1779113130}
   cityText: {fileID: 1738880487}
+  regionPriceText: {fileID: 1747323437}
   personNameText: {fileID: 1917918334}
   personSalaryText: {fileID: 1164217817}
   textUINames:
-  - 'Average House Price: '
-  - 'Average Flat Price: '
-  - 'Average Semi Detached Price:'
-  - 'Average Detached Price: '
+  - 'Average Flat Price:'
+  - 'Average Semi-Detached Price:'
+  - 'Average Detached Price:'
 --- !u!4 &641880667
 Transform:
   m_ObjectHideFlags: 0
@@ -2794,6 +2795,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47613f05406c1ba438c28f571cb2a96c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &641880670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641880665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c156130e11ce2db47b89b98f474a5ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  houseDevelopedByRegion:
+    list: []
+    keyCollision: 0
+  housePriceByRegion:
+    list: []
+    keyCollision: 0
 --- !u!1 &653356735
 GameObject:
   m_ObjectHideFlags: 0
@@ -7764,6 +7783,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c156130e11ce2db47b89b98f474a5ead, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  houseDevelopedByRegion:
+    list: []
+    keyCollision: 0
   housePriceByRegion:
     list: []
     keyCollision: 0

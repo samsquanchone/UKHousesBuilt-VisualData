@@ -10,6 +10,7 @@ public class MouseClick : MonoBehaviour
 
     public TMP_Text[] cityDataText;
     public TMP_Text cityText;
+    public TMP_Text regionPriceText;
 
     public TMP_Text personNameText;
     public TMP_Text personSalaryText;
@@ -43,7 +44,10 @@ public class MouseClick : MonoBehaviour
                             Debug.Log(hit.transform.name + " values:" + values[i]);
                         }
                     }
-                    SetCityDataUI(hit.transform.name, values);
+
+                    
+                    SetCityDataUI(hit.transform.name, values, DataManager.instance.GetSpecificValue(setYear, 3));
+                    Debug.Log("Dictionary Search val: " + DataManager.instance.GetSpecificValue(setYear, 3) + "Dicionary Search Year: " + setYear);
 
                 }
 
@@ -61,10 +65,11 @@ public class MouseClick : MonoBehaviour
         Debug.Log(year);
     }
 
-     void SetCityDataUI(string name, float[] cityDataValues)
+     void SetCityDataUI(string name, float[] cityDataValues, float regionPriceAverage)
     {
         cityText.text = "City: " + name;
-
+        regionPriceText.text = "Average house price: " + regionPriceAverage;
+      
         if (cityDataValues != null)
         {
             for (int i = 0; i < cityDataValues.Length; i++)
@@ -72,6 +77,8 @@ public class MouseClick : MonoBehaviour
                 cityDataText[i].text = textUINames[i] + "£" + cityDataValues[i];
             }
         }
+         
+
        
     }
 
