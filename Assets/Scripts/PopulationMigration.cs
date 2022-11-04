@@ -1,7 +1,7 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class PopulationMigration : MonoBehaviour
 {
@@ -10,16 +10,16 @@ public class PopulationMigration : MonoBehaviour
     [SerializeField] private Transform goal = null;
     [SerializeField] private float goalSuccessDistance = 1f;
 
-    NavMeshAgent agent;
+    [SerializeField] private UnityEngine.AI.NavMeshAgent agent;
 
     void Start()
     {
-
+        Migrate();
     }
 
     public void Migrate()
     {
-        agent = GetComponent<NavMeshAgent>();
+        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
 
         goal = migrationPoints[Random.Range(0, migrationPoints.Count)].transform;
         agent.destination = goal.position;
@@ -27,9 +27,10 @@ public class PopulationMigration : MonoBehaviour
 
     void Update()
     {
+
         if (Vector3.Distance(agent.transform.position, goal.position) <= goalSuccessDistance)
         {
-            Destroy(this.gameObject);
+            // Destroy(this.gameObject);
         }
     }
 }

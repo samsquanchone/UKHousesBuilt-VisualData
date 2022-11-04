@@ -9,7 +9,6 @@ public class DataManager : MonoBehaviour
     //public GenericDictionary<int, float[]> housesBuiltDictionary;
     public GenericDictionary<int, float[]> housePriceByRegion;
 
-    // Start is called before the first frame update
     void Start()
     {
         LoadDataFromFile(housePriceByRegion, "HouseDevelop.csv");
@@ -34,7 +33,7 @@ public class DataManager : MonoBehaviour
     private void LoadDataFromFile(GenericDictionary<int, float[]> dictionary, string fileName)
     {
         //Dictionary<int, float[]> countryHousingDictionary = new Dictionary<int, float[]>();
-        string path = (Application.streamingAssetsPath + "/"+fileName);
+        string path = (Application.streamingAssetsPath + "/" + fileName);
         Debug.Log(path);
         if (sr != null)
             sr.Close();
@@ -48,16 +47,16 @@ public class DataManager : MonoBehaviour
                 string[] values = line.Split(',');
                 List<float> floatList = new List<float>();
                 float f;
-                for(int i=0; i<values.Length; i++)
+                for (int i = 0; i < values.Length; i++)
                 {
-                    if(float.TryParse(values[i], out f))
+                    if (float.TryParse(values[i], out f))
                     {
                         floatList.Add(f);
                     }
                 }
-                if(floatList.Count > 0)
+                if (floatList.Count > 0)
                 {
-                    dictionary.Add((int)floatList[0], floatList.GetRange(1,floatList.Count-1).ToArray());
+                    dictionary.Add((int)floatList[0], floatList.GetRange(1, floatList.Count - 1).ToArray());
                     floatList.Clear();
                 }
             }

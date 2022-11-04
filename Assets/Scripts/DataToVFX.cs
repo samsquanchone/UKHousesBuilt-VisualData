@@ -10,6 +10,8 @@ public class DataToVFX : MonoBehaviour
     private VisualEffect[] vfxs;
     private int arraySize = 4;
 
+   
+
     GameObject[] objects;
     void Awake()
     {
@@ -44,5 +46,5 @@ public class DataToVFX : MonoBehaviour
 
     }
  
-
+   
 }
