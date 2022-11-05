@@ -14,7 +14,7 @@ public class PopulationMigration : MonoBehaviour
 
     void Start()
     {
-        Migrate();
+        //Migrate();
     }
 
     public void Migrate()
@@ -28,9 +28,9 @@ public class PopulationMigration : MonoBehaviour
     void Update()
     {
 
-        if (Vector3.Distance(agent.transform.position, goal.position) <= goalSuccessDistance)
+        /*if (Vector3.Distance(agent.transform.position, goal.position) <= goalSuccessDistance)
         {
             // Destroy(this.gameObject);
-        }
+        }*/
     }
 }

@@ -6,11 +6,11 @@ public class PersonData : MonoBehaviour
 {
     public float salary;
     [SerializeField] private string[] names;
-    public string name;
+    public string personName;
     // Start is called before the first frame update
     void Start()
     {
-        name = names[Random.Range(0, names.Length)];
+        personName = names[Random.Range(0, names.Length)];
         salary = Random.Range((float)MainSceneManager.instance.minSalary, (float)MainSceneManager.instance.maxSalary);
     }
 

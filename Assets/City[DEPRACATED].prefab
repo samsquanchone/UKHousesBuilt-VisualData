@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4506269925319300918}
   - component: {fileID: 2659284727071228117}
   m_Layer: 0
-  m_Name: City
+  m_Name: City[DEPRACATED]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,6 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numberOfMigrators: 0
   personPrefab: {fileID: 3562236304754211996, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
+  suburbPrefab: {fileID: 0}
   suburbs: []
 --- !u!1 &2580815153175533088
 GameObject:

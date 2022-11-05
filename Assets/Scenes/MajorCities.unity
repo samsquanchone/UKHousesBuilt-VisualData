@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.17980957, g: 0.17980957, b: 0.17980957, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -303,6 +303,7 @@ GameObject:
   - component: {fileID: 12690977}
   - component: {fileID: 12690976}
   - component: {fileID: 12690975}
+  - component: {fileID: 12690980}
   - component: {fileID: 12690979}
   m_Layer: 0
   m_Name: Bristol
@@ -402,6 +403,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cityData: {fileID: 11400000, guid: 3427d7e9cad2f9e41b8ac7680991d7a9, type: 2}
+--- !u!114 &12690980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12690974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21c00479b25d70540b68af9d3d696020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfMigrators: 4
+  personPrefab: {fileID: 4290269232189933931, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
+  suburbPrefab: {fileID: 0}
+  suburbs: []
 --- !u!1 &47137604
 GameObject:
   m_ObjectHideFlags: 0
@@ -1908,174 +1925,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 397708474}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &407028142
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 407028148}
-  - component: {fileID: 407028147}
-  - component: {fileID: 407028146}
-  - component: {fileID: 407028145}
-  - component: {fileID: 407028144}
-  - component: {fileID: 407028143}
-  - component: {fileID: 407028149}
-  m_Layer: 0
-  m_Name: Capsule
-  m_TagString: Person
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &407028143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 407028142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37ec1d57916ec844da4e70168e70c238, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  migrationPoints:
-  - {fileID: 1801800285}
-  - {fileID: 1054385963}
-  - {fileID: 1679652120}
-  - {fileID: 12690974}
-  - {fileID: 507079231}
-  - {fileID: 2116244325}
-  - {fileID: 2028785999}
-  - {fileID: 1851072339}
-  - {fileID: 1481660897}
-  goal: {fileID: 0}
-  goalSuccessDistance: 1
-  agent: {fileID: 407028144}
---- !u!195 &407028144
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 407028142}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0.5
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 1
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!136 &407028145
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 407028142}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &407028146
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 407028142}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 257
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 44d08f6173890ef408690abd9b343bf2, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &407028147
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 407028142}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &407028148
+--- !u!4 &407028148 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 4290269232189933937, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
+  m_PrefabInstance: {fileID: 4290269232588572869}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 407028142}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.593879, y: 13.331107, z: 7.339827}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1052593837}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &407028149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 407028142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45916fcbe19b02543ab019fe1e4b8a44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  salary: 0
-  names:
-  - Ben
-  - Aaron
-  - James
-  - Sarha
-  - Jane
-  name: 
 --- !u!1 &507079231
 GameObject:
   m_ObjectHideFlags: 0
@@ -2088,6 +1942,7 @@ GameObject:
   - component: {fileID: 507079234}
   - component: {fileID: 507079233}
   - component: {fileID: 507079232}
+  - component: {fileID: 507079237}
   - component: {fileID: 507079236}
   m_Layer: 0
   m_Name: Newcastle
@@ -2187,6 +2042,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cityData: {fileID: 11400000, guid: 5049820ff9fb60840bdbaeca2aa17d0a, type: 2}
+--- !u!114 &507079237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507079231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21c00479b25d70540b68af9d3d696020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfMigrators: 4
+  personPrefab: {fileID: 4290269232189933931, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
+  suburbPrefab: {fileID: 0}
+  suburbs: []
 --- !u!1 &525067825
 GameObject:
   m_ObjectHideFlags: 0
@@ -4573,7 +4444,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1052593837
 Transform:
   m_ObjectHideFlags: 0
@@ -4637,6 +4508,7 @@ GameObject:
   - component: {fileID: 1054385966}
   - component: {fileID: 1054385965}
   - component: {fileID: 1054385964}
+  - component: {fileID: 1054385969}
   - component: {fileID: 1054385968}
   m_Layer: 0
   m_Name: Cambridge
@@ -4736,6 +4608,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cityData: {fileID: 11400000, guid: 042b59f1b3010f04eb424b378701d088, type: 2}
+--- !u!114 &1054385969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054385963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21c00479b25d70540b68af9d3d696020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfMigrators: 4
+  personPrefab: {fileID: 4290269232189933931, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
+  suburbPrefab: {fileID: 0}
+  suburbs: []
 --- !u!1 &1092667160
 GameObject:
   m_ObjectHideFlags: 0
@@ -7018,6 +6906,7 @@ GameObject:
   - component: {fileID: 1481660900}
   - component: {fileID: 1481660899}
   - component: {fileID: 1481660898}
+  - component: {fileID: 1481660903}
   - component: {fileID: 1481660902}
   m_Layer: 0
   m_Name: Leeds
@@ -7117,6 +7006,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cityData: {fileID: 11400000, guid: d66d06aedf35bd248989ed0014b6681b, type: 2}
+--- !u!114 &1481660903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481660897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21c00479b25d70540b68af9d3d696020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfMigrators: 4
+  personPrefab: {fileID: 4290269232189933931, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
+  suburbPrefab: {fileID: 0}
+  suburbs: []
 --- !u!1 &1612856851
 GameObject:
   m_ObjectHideFlags: 0
@@ -7553,6 +7458,7 @@ GameObject:
   - component: {fileID: 1679652123}
   - component: {fileID: 1679652122}
   - component: {fileID: 1679652121}
+  - component: {fileID: 1679652126}
   - component: {fileID: 1679652125}
   m_Layer: 0
   m_Name: Leicester
@@ -7652,6 +7558,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cityData: {fileID: 11400000, guid: bbcf70619b2156f47ab84705deb72791, type: 2}
+--- !u!114 &1679652126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679652120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21c00479b25d70540b68af9d3d696020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfMigrators: 4
+  personPrefab: {fileID: 4290269232189933931, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
+  suburbPrefab: {fileID: 0}
+  suburbs: []
 --- !u!1 &1716266657
 GameObject:
   m_ObjectHideFlags: 0
@@ -8531,6 +8453,7 @@ GameObject:
   - component: {fileID: 1801800288}
   - component: {fileID: 1801800287}
   - component: {fileID: 1801800286}
+  - component: {fileID: 1801800291}
   - component: {fileID: 1801800290}
   m_Layer: 0
   m_Name: London
@@ -8630,6 +8553,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cityData: {fileID: 11400000, guid: df7a127f28072a84a88e69023ac4ed89, type: 2}
+--- !u!114 &1801800291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801800285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21c00479b25d70540b68af9d3d696020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfMigrators: 4
+  personPrefab: {fileID: 4290269232189933931, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
+  suburbPrefab: {fileID: 0}
+  suburbs: []
 --- !u!1 &1847748698
 GameObject:
   m_ObjectHideFlags: 0
@@ -8810,6 +8749,7 @@ GameObject:
   - component: {fileID: 1851072342}
   - component: {fileID: 1851072341}
   - component: {fileID: 1851072340}
+  - component: {fileID: 1851072345}
   - component: {fileID: 1851072344}
   m_Layer: 0
   m_Name: Brighton
@@ -8909,6 +8849,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cityData: {fileID: 11400000, guid: 3dd3a7365ade7aa48821ada76442f043, type: 2}
+--- !u!114 &1851072345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851072339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21c00479b25d70540b68af9d3d696020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfMigrators: 4
+  personPrefab: {fileID: 4290269232189933931, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
+  suburbPrefab: {fileID: 0}
+  suburbs: []
 --- !u!1 &1917918332
 GameObject:
   m_ObjectHideFlags: 0
@@ -10021,6 +9977,7 @@ GameObject:
   - component: {fileID: 2028786002}
   - component: {fileID: 2028786001}
   - component: {fileID: 2028786000}
+  - component: {fileID: 2028786005}
   - component: {fileID: 2028786004}
   m_Layer: 0
   m_Name: Birmingham
@@ -10120,6 +10077,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cityData: {fileID: 11400000, guid: c2008a6c421233740a530f7bf88caec8, type: 2}
+--- !u!114 &2028786005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028785999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21c00479b25d70540b68af9d3d696020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfMigrators: 4
+  personPrefab: {fileID: 4290269232189933931, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
+  suburbPrefab: {fileID: 0}
+  suburbs: []
 --- !u!1 &2068735242
 GameObject:
   m_ObjectHideFlags: 0
@@ -10785,6 +10758,7 @@ GameObject:
   - component: {fileID: 2116244328}
   - component: {fileID: 2116244327}
   - component: {fileID: 2116244326}
+  - component: {fileID: 2116244331}
   - component: {fileID: 2116244330}
   m_Layer: 0
   m_Name: Manchester
@@ -10884,6 +10858,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cityData: {fileID: 11400000, guid: b2da1a1fbc851904d9b7ef0e02cf8e07, type: 2}
+--- !u!114 &2116244331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116244325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21c00479b25d70540b68af9d3d696020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfMigrators: 4
+  personPrefab: {fileID: 4290269232189933931, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
+  suburbPrefab: {fileID: 0}
+  suburbs: []
 --- !u!1 &359312180911513056
 GameObject:
   m_ObjectHideFlags: 0
@@ -10949,6 +10939,101 @@ Transform:
   m_Father: {fileID: 543450652562926956}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: -88.743, y: -3.099, z: -3.101}
+--- !u!1001 &4290269232588572869
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 1052593837}
+    m_Modifications:
+    - target: {fileID: 4290269232189933930, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
+      propertyPath: migrationPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1801800285}
+    - target: {fileID: 4290269232189933930, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
+      propertyPath: migrationPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 1054385963}
+    - target: {fileID: 4290269232189933930, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
+      propertyPath: migrationPoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1679652120}
+    - target: {fileID: 4290269232189933930, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
+      propertyPath: migrationPoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 12690974}
+    - target: {fileID: 4290269232189933930, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
+      propertyPath: migrationPoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 507079231}
+    - target: {fileID: 4290269232189933930, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
+      propertyPath: migrationPoints.Array.data[5]
+      value: 
+      objectReference: {fileID: 2116244325}
+    - target: {fileID: 4290269232189933930, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
+      propertyPath: migrationPoints.Array.data[6]
+      value: 
+      objectReference: {fileID: 2028785999}
+    - target: {fileID: 4290269232189933930, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
+      propertyPath: migrationPoints.Array.data[7]
+      value: 
+      objectReference: {fileID: 1851072339}
+    - target: {fileID: 4290269232189933930, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
+      propertyPath: migrationPoints.Array.data[8]
+      value: 
+      objectReference: {fileID: 1481660897}
+    - target: {fileID: 4290269232189933931, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
+      propertyPath: m_Name
+      value: Person
+      objectReference: {fileID: 0}
+    - target: {fileID: 4290269232189933937, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4290269232189933937, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.593879
+      objectReference: {fileID: 0}
+    - target: {fileID: 4290269232189933937, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 13.331107
+      objectReference: {fileID: 0}
+    - target: {fileID: 4290269232189933937, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.339827
+      objectReference: {fileID: 0}
+    - target: {fileID: 4290269232189933937, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4290269232189933937, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4290269232189933937, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4290269232189933937, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4290269232189933937, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4290269232189933937, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4290269232189933937, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
 --- !u!33 &4665000263352816809
 MeshFilter:
   m_ObjectHideFlags: 0
