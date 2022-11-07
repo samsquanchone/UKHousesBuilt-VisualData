@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4290269232189933930}
   - component: {fileID: 4290269232189933936}
   m_Layer: 0
-  m_Name: Person
+  m_Name: person
   m_TagString: Person
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 44d08f6173890ef408690abd9b343bf2, type: 2}
+  - {fileID: 2100000, guid: 594efdd65f49adf4da09429e9493b958, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -167,4 +167,4 @@ MonoBehaviour:
   - James
   - Sarha
   - Jane
-  name: 
+  personName: 

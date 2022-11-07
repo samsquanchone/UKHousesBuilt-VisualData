@@ -16,11 +16,8 @@ public class SetupSceneManager : MonoBehaviour
     public string min_salary;
     public string max_salary;
 
-
-
     private void Awake()
     {
-       
         if (ssmInstance != null)
         {
             Destroy(gameObject);
