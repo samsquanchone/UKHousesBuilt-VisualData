@@ -30,15 +30,15 @@ public class SetupSceneManager : MonoBehaviour
 
     private bool CheckValidDataInput()
     {
-        if (int.TryParse(input_min_salary.text, out int min_salary_int) != true)
+        if (float.TryParse(input_min_salary.text, out float min_salary_int) != true)
         {
             return false;
         }
-        if (int.TryParse(input_max_salary.text, out int max_salary_int) != true)
+        if (float.TryParse(input_max_salary.text, out float max_salary_int) != true)
         {
             return false;
         }
-        if (int.TryParse(input_max_population.text, out int max_population_int) != true)
+        if (float.TryParse(input_max_population.text, out float max_population_int) != true)
         {
             return false;
         }

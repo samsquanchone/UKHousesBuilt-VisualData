@@ -12,7 +12,7 @@ public class MainSceneManager : MonoBehaviour
     public float minSalary;
     public float maxSalary;
 
-    [SerializeField] private Transform spawn;
+    [SerializeField] private GameObject spawnObj;
     [SerializeField] private int numberOfMigrators = 36;
     [SerializeField] private GameObject personPrefab;
 
@@ -41,21 +41,29 @@ public class MainSceneManager : MonoBehaviour
     {
         for (int i = 0; i < numberOfMigrators; i++)
         {
-            GameObject person = Instantiate(personPrefab, spawn.position + new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f)), Quaternion.identity);
+            GameObject person = Instantiate(personPrefab, spawnObj.transform.position + new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f)), Quaternion.identity);
             //person.GetComponent<PersonData>().salary;
             //person.GetComponent<PopulationMigration>().cityObj = this.gameObject;
 
             int randomCity = Random.Range(0, cities.Count);
             City city = cities[randomCity].GetComponent<City>();
 
+            bool housing = false;
             for (int j = city.suburbs.Count - 1; j >= 0 ; --j)
             {
-                Debug.Log("city: " + cities[randomCity].name +  ". suburbs[" + j +"]");
+                //Debug.Log("city: " + cities[randomCity].name +  ". suburbs[" + j +"]");
                 if(person.GetComponent<PersonData>().salary > city.suburbs[j].GetComponent<Suburb>().housePrice)
                 {
                     person.GetComponent<PopulationMigration>().SetGoal(city.suburbs[j]);
+                    housing = true;
                     break;
                 }
+            }
+
+            if(!housing)
+            {
+                Debug.Log("person: " + i + " cannot afford housing");
+                person.GetComponent<PopulationMigration>().SetGoal(spawnObj);
             }
 
             /*int randomSuburb = Random.Range(-1, city.suburbs.Count);

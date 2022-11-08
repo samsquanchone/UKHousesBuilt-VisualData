@@ -503,6 +503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 0
+  housePrice: 0
 --- !u!1 &47137604
 GameObject:
   m_ObjectHideFlags: 0
@@ -979,6 +980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 1
+  housePrice: 0
 --- !u!4 &114118092
 Transform:
   m_ObjectHideFlags: 0
@@ -1175,6 +1177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 0
+  housePrice: 0
 --- !u!1 &277678661
 GameObject:
   m_ObjectHideFlags: 0
@@ -1422,6 +1425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 0
+  housePrice: 0
 --- !u!4 &281138069
 Transform:
   m_ObjectHideFlags: 0
@@ -1651,6 +1655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 3
+  housePrice: 0
 --- !u!1 &311161672
 GameObject:
   m_ObjectHideFlags: 0
@@ -1902,6 +1907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 2
+  housePrice: 0
 --- !u!1 &380295608
 GameObject:
   m_ObjectHideFlags: 0
@@ -2116,6 +2122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 0
+  housePrice: 0
 --- !u!1 &397708474
 GameObject:
   m_ObjectHideFlags: 0
@@ -2335,6 +2342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 3
+  housePrice: 0
 --- !u!1 &467711227
 GameObject:
   m_ObjectHideFlags: 0
@@ -2365,6 +2373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 2
+  housePrice: 0
 --- !u!4 &467711229
 Transform:
   m_ObjectHideFlags: 0
@@ -2929,6 +2938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 1
+  housePrice: 0
 --- !u!1 &614365332
 GameObject:
   m_ObjectHideFlags: 0
@@ -3143,6 +3153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 1
+  housePrice: 0
 --- !u!1 &641880665
 GameObject:
   m_ObjectHideFlags: 0
@@ -3475,6 +3486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 1
+  housePrice: 0
 --- !u!1 &694644785
 GameObject:
   m_ObjectHideFlags: 0
@@ -3825,6 +3837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 1
+  housePrice: 0
 --- !u!1 &703857247
 GameObject:
   m_ObjectHideFlags: 0
@@ -4385,6 +4398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 2
+  housePrice: 0
 --- !u!1 &832946487
 GameObject:
   m_ObjectHideFlags: 0
@@ -4851,6 +4865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 3
+  housePrice: 0
 --- !u!1 &909618297
 GameObject:
   m_ObjectHideFlags: 0
@@ -4896,6 +4911,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 2
+  housePrice: 0
 --- !u!1 &967980896
 GameObject:
   m_ObjectHideFlags: 0
@@ -4941,6 +4957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 2
+  housePrice: 0
 --- !u!1 &1000497995
 GameObject:
   m_ObjectHideFlags: 0
@@ -4986,6 +5003,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 0
+  housePrice: 0
 --- !u!1 &1002483843
 GameObject:
   m_ObjectHideFlags: 0
@@ -5411,6 +5429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 2
+  housePrice: 0
 --- !u!1 &1038618262
 GameObject:
   m_ObjectHideFlags: 0
@@ -5456,6 +5475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 0
+  housePrice: 0
 --- !u!1 &1041909747
 GameObject:
   m_ObjectHideFlags: 0
@@ -5501,6 +5521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 1
+  housePrice: 0
 --- !u!1 &1052593836
 GameObject:
   m_ObjectHideFlags: 0
@@ -5748,6 +5769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 0
+  housePrice: 0
 --- !u!1 &1092667160
 GameObject:
   m_ObjectHideFlags: 0
@@ -6131,6 +6153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 3
+  housePrice: 0
 --- !u!1 &1144337079
 GameObject:
   m_ObjectHideFlags: 0
@@ -6176,6 +6199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 2
+  housePrice: 0
 --- !u!1 &1164217815
 GameObject:
   m_ObjectHideFlags: 0
@@ -6660,6 +6684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 1
+  housePrice: 0
 --- !u!1 &1190165356
 GameObject:
   m_ObjectHideFlags: 0
@@ -6825,6 +6850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 3
+  housePrice: 0
 --- !u!4 &1198187459
 Transform:
   m_ObjectHideFlags: 0
@@ -7091,6 +7117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 3
+  housePrice: 0
 --- !u!1 &1264412403
 GameObject:
   m_ObjectHideFlags: 0
@@ -7385,6 +7412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 1
+  housePrice: 0
 --- !u!1 &1335760811
 GameObject:
   m_ObjectHideFlags: 0
@@ -7430,6 +7458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 3
+  housePrice: 0
 --- !u!1 &1338840874
 GameObject:
   m_ObjectHideFlags: 0
@@ -8387,6 +8416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 3
+  housePrice: 0
 --- !u!1 &1481660897
 GameObject:
   m_ObjectHideFlags: 0
@@ -8567,6 +8597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 0
+  housePrice: 0
 --- !u!1 &1612856851
 GameObject:
   m_ObjectHideFlags: 0
@@ -9037,6 +9068,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 2
+  housePrice: 0
 --- !u!1 &1679652120
 GameObject:
   m_ObjectHideFlags: 0
@@ -10221,6 +10253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 2
+  housePrice: 0
 --- !u!1 &1847748698
 GameObject:
   m_ObjectHideFlags: 0
@@ -10570,6 +10603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 3
+  housePrice: 0
 --- !u!1 &1917918332
 GameObject:
   m_ObjectHideFlags: 0
@@ -11054,6 +11088,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 1
+  housePrice: 0
 --- !u!1 &1983074421
 GameObject:
   m_ObjectHideFlags: 0
@@ -12453,6 +12488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 0
+  housePrice: 0
 --- !u!1 &2114364302
 GameObject:
   m_ObjectHideFlags: 0
@@ -12485,7 +12521,7 @@ MonoBehaviour:
   display_max_population: {fileID: 1190165357}
   minSalary: 0
   maxSalary: 0
-  spawn: {fileID: 10833570}
+  spawnObj: {fileID: 10833569}
   numberOfMigrators: 36
   personPrefab: {fileID: 4290269232189933931, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
   cities:
