@@ -58,7 +58,7 @@ public class MouseClick : MonoBehaviour
 
                 else if (hit.transform.CompareTag("Person"))
                 {
-                    SetPersonDataUI(hit.transform.gameObject.GetComponent<PersonData>().name, hit.transform.gameObject.GetComponent<PersonData>().salary);
+                    SetPersonDataUI(hit.transform.gameObject.GetComponent<PersonData>().personName, hit.transform.gameObject.GetComponent<PersonData>().salary);
                 }
             }
         }
