@@ -24,7 +24,8 @@ public class PopulationMigration : MonoBehaviour
 
     private void Start()
     {
-        Migrate(0);
+        migrationPoints.Clear();
+        //Migrate();
     }
 
     public void SetGoal(GameObject _goal)
@@ -33,11 +34,13 @@ public class PopulationMigration : MonoBehaviour
         agent.destination = goal.position;
     }
 
-    public void Migrate(int year)
+    public void Migrate()
     {
         // if person can no longer to afford to stay
         if(info.salary < 100 /*cityObj.GetComponent<CityData>().cityDataByYear*/)
         {
+            // check against each hosue type x 4
+
             // loop through each house type
             foreach (var suburb in cityObj.GetComponent<City>().suburbs)
             {
@@ -53,9 +56,9 @@ public class PopulationMigration : MonoBehaviour
 
     void Update()
     {
-        if (Vector3.Distance(agent.transform.position, goal.position) <= goalSuccessDistance)
+        /*if (Vector3.Distance(agent.transform.position, goal.position) <= goalSuccessDistance)
         {
             // Destroy(this.gameObject);
-        }
+        }*/
     }
 }

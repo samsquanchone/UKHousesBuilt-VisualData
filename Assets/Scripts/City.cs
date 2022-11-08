@@ -4,22 +4,9 @@ using UnityEngine;
 
 public class City : MonoBehaviour
 {
-    [SerializeField] private int numberOfMigrators = 4; 
-    [SerializeField] private GameObject personPrefab;
-
     [SerializeField] private float suburbDistance = 2;
     [SerializeField] private GameObject suburbPrefab;
     public List<GameObject> suburbs = new List<GameObject>();
-
-    private void Awake()
-    {
-        SpawnPopulation();
-    }
-
-    void Start()
-    {
-
-    }
 
     [ContextMenu("SpawnSuburbs")]
     void SpawnSuburbs()
@@ -60,19 +47,6 @@ public class City : MonoBehaviour
             DestroyImmediate(suburbs[i]);
         }
         suburbs.Clear();
-    }
-
-    /// <summary>
-    /// spawnns a number of migrators around a spawn area with some variation to avoid stacking
-    /// </summary>
-    void SpawnPopulation()
-    {
-        for (int i = 0; i < numberOfMigrators; i++)
-        {
-            GameObject person = Instantiate(personPrefab, this.transform.position + new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f)), Quaternion.identity);
-            person.GetComponent<PopulationMigration>().cityObj = this.gameObject;
-            person.GetComponent<PopulationMigration>().SetGoal(this.gameObject);
-        }
     }
 
     /*[ContextMenu("MigratePopulation")]

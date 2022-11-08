@@ -14,13 +14,30 @@ public enum HouseType
 public class Suburb : MonoBehaviour
 {
     public HouseType houseType;
+    public float housePrice = 0;
 
     void Start()
     {
-        
+        switch (houseType)
+        {
+            case HouseType.FLAT:
+                housePrice = 1;
+                break;
+            case HouseType.TERRACED:
+                housePrice = 2;
+                break;
+            case HouseType.SEMIDETACHED:
+                housePrice = 3;
+                break;
+            case HouseType.DETACHED:
+                housePrice = 4;
+                break;
+            default:
+                Debug.LogWarning("Incorrect house type");
+                break;
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
         
