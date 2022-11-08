@@ -15,6 +15,7 @@ public class MouseClick : MonoBehaviour
 
     public TMP_Text personNameText;
     public TMP_Text personSalaryText;
+    public TMP_Text yearText;
 
     [SerializeField] private string[] textUINames;
     // Start is called before the first frame update
@@ -65,6 +66,7 @@ public class MouseClick : MonoBehaviour
 
     public void SetYear(float year)
     {
+        yearText.text = year.ToString();
         setYear = year;
         Debug.Log(year);
     }
