@@ -9,8 +9,8 @@ public class CameraControl : MonoBehaviour
     private float sensitivity = 2f;
     private Vector3 newPosition = Vector3.zero;
     private float smoothFactor = 0.05f;
-    private float zoomInLimit = -3f;
-    private float zoomOutLimit = -18f;
+    private float zoomInLimit = 4f;
+    private float zoomOutLimit = 22f;
 
     //public Transform cube;
     void Start()
@@ -23,28 +23,29 @@ public class CameraControl : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            newPosition += (new Vector3(speed * Time.deltaTime, 0, 0));
+            newPosition += (new Vector3(-speed * Time.deltaTime, 0, 0));
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            newPosition += (new Vector3(-speed * Time.deltaTime, 0, 0));
+            newPosition += (new Vector3(speed * Time.deltaTime, 0, 0));
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            newPosition += (new Vector3(0, -speed * Time.deltaTime, 0));
+            newPosition += (new Vector3(0, 0, speed * Time.deltaTime));
         }
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            newPosition += (new Vector3(0, speed * Time.deltaTime, 0));
+            newPosition += (new Vector3(0, 0, -speed * Time.deltaTime));
         }
-        newPosition += new Vector3(0, 0, Input.mouseScrollDelta.y * sensitivity);
-        newPosition.z = Mathf.Clamp(newPosition.z, zoomOutLimit, zoomInLimit);
+        newPosition += new Vector3(0, Input.mouseScrollDelta.y * sensitivity, 0);
+        if (Input.mouseScrollDelta.y != 0)
+            newPosition.y = Mathf.Clamp(newPosition.y, zoomOutLimit, zoomInLimit);
         transform.position = Vector3.Lerp(transform.position, newPosition, smoothFactor);
     }
 
     public void FocusOn(Transform t)
     {
-        newPosition = new Vector3(t.position.x, t.position.y, -10f);
+        newPosition = new Vector3(t.position.x, t.position.y, 4f);
     }
 
     //void Test()
