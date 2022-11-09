@@ -28,8 +28,10 @@ public class MouseClick : MonoBehaviour
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
+            //If rayhit hits object, output hit variable
             if (Physics.Raycast(ray, out hit, 10000f))
             {
+                //If the object that is hit is of tag "City" get the values for the houseByPriceRegion dictionary (from DataManager instance) for the current slider UI year value
                 if (hit.transform.CompareTag("City"))
                 {
                     Debug.Log(hit.transform.name);
@@ -37,7 +39,7 @@ public class MouseClick : MonoBehaviour
                    
                     if (DataManager.instance.housePriceByRegion.TryGetValue((int)setYear, out price))
                     {
-
+                        //Send values of objects data script, as well as dictionary values for the current year to the SetCityDataUI function
                         SetCityDataUI(hit.transform.name, price, hit.transform.gameObject.GetComponent<CityPrices>().cityData.dataIndex, hit.transform.gameObject.GetComponent<CityPrices>().cityData.citySalaryNeededDictionaryName);
 
                     }
@@ -45,6 +47,7 @@ public class MouseClick : MonoBehaviour
 
                 }
 
+                //If the object that is hit by ray is of tag "Person" send the personData script variable values to the SetPersonDataUI function
                 else if (hit.transform.CompareTag("Person"))
                 {
                     SetPersonDataUI(hit.transform.gameObject.GetComponent<PersonData>().personName, hit.transform.gameObject.GetComponent<PersonData>().salary);
@@ -53,8 +56,10 @@ public class MouseClick : MonoBehaviour
         }
     }
 
+    //Set the local current year based off slider changed value (slider triggers this function and supplies the argument)
     public void SetYear(float year)
     {
+        
         yearText.text = year.ToString();
         setYear = year;
         Debug.Log(year);
@@ -66,6 +71,7 @@ public class MouseClick : MonoBehaviour
         cityText.text = cityName;
         cityAvrgPriceText.text = "Average house price: " + "£" + averageValues[averageValuesIndex];
 
+        //Compare string variable name of city hit by ray to the dictionary name for the cities salary needed dictionary, then supply UI values based off the dictionary values for the current year
         if (cityDictionaryName == "salaryNeededLeicester")
         {
             if (DataManager.instance.salaryNeededLeicester.TryGetValue((int)setYear, out salaryNeededValues))
