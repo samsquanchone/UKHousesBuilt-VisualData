@@ -10,6 +10,19 @@ public class DataManager : MonoBehaviour
     
     public GenericDictionary<int, float[]> houseDevelopedByRegion;
     public GenericDictionary<int, float[]> housePriceByRegion;
+
+
+    public GenericDictionary<int, float[]> salaryNeededLeicester;
+    public GenericDictionary<int, float[]> salaryNeededCambridge;
+    public GenericDictionary<int, float[]> salaryNeededNewcastle;
+    public GenericDictionary<int, float[]> salaryNeededLondon;
+    public GenericDictionary<int, float[]> salaryNeededBrighton;
+    public GenericDictionary<int, float[]> salaryNeededBristol;
+    public GenericDictionary<int, float[]> salaryNeededManchester;
+    public GenericDictionary<int, float[]> salaryNeededBirmingham;
+    public GenericDictionary<int, float[]> salaryNeededLeeds;
+
+
     private float[] values;
 
     void Awake()
@@ -17,6 +30,16 @@ public class DataManager : MonoBehaviour
         m_Instance = this;
         LoadDataFromFile(houseDevelopedByRegion, "HouseDevelop.csv");
         LoadDataFromFile(housePriceByRegion, "HousePrices-UkRegions.csv");
+
+        LoadDataFromFile(salaryNeededLeicester, "Leicester-SalaryNeeded.csv");
+        LoadDataFromFile(salaryNeededCambridge, "Cambridge-SalaryNeeded.csv");
+        LoadDataFromFile(salaryNeededNewcastle, "Newcastle-SalaryNeeded.csv");
+        LoadDataFromFile(salaryNeededLondon, "London-SalaryNeeded.csv");
+        LoadDataFromFile(salaryNeededBrighton, "Brighton-SalaryNeeded.csv");
+        LoadDataFromFile(salaryNeededBristol, "Bristol-SalaryNeeded.csv");
+        LoadDataFromFile(salaryNeededManchester, "Manchester-SalaryNeeded.csv");
+        LoadDataFromFile(salaryNeededBirmingham, "Birmingham-SalaryNeeded.csv");
+        LoadDataFromFile(salaryNeededLeeds, "Leeds-SalaryNeeded.csv");
     }
     
 
