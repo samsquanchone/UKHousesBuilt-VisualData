@@ -18,11 +18,7 @@ public class MouseClick : MonoBehaviour
     public TMP_Text yearText;
 
     [SerializeField] private string[] textUINames;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+   
 
     // Update is called once per frame
     void Update()
@@ -37,15 +33,8 @@ public class MouseClick : MonoBehaviour
                 if (hit.transform.CompareTag("City"))
                 {
                     Debug.Log(hit.transform.name);
-                    //GetData of city 
-                   /* hit.transform.gameObject.GetComponent<CityPrices>().cityData.cityDataByYear.TryGetValue((int)setYear, out values);
-                    if (values != null)
-                    {
-                        for (int i = 0; i < values.Length; i++) //Iterate over array (number of values for that year)
-                        {
-                            Debug.Log(hit.transform.name + " values:" + values[i]);
-                        }
-                    } */
+                    
+                   
                     if (DataManager.instance.housePriceByRegion.TryGetValue((int)setYear, out price))
                     {
 
@@ -83,7 +72,7 @@ public class MouseClick : MonoBehaviour
             {
                 for (int i = 0; i < salaryNeededValues.Length; i++)
                 {
-                    cityDataText[i].text = textUINames[i] + "£" + salaryNeededValues[i];
+                    cityDataText[i].text = textUINames[i] + " £" + salaryNeededValues[i];
                 }
             }
         }
@@ -94,7 +83,7 @@ public class MouseClick : MonoBehaviour
             {
                 for (int i = 0; i < salaryNeededValues.Length; i++)
                 {
-                    cityDataText[i].text = textUINames[i] + "£" + salaryNeededValues[i];
+                    cityDataText[i].text = textUINames[i] + " £" + salaryNeededValues[i];
                 }
             }
         }
@@ -105,7 +94,7 @@ public class MouseClick : MonoBehaviour
             {
                 for (int i = 0; i < salaryNeededValues.Length; i++)
                 {
-                    cityDataText[i].text = textUINames[i] + "£" + salaryNeededValues[i];
+                    cityDataText[i].text = textUINames[i] + " £" + salaryNeededValues[i];
                 }
             }
         }
@@ -116,7 +105,7 @@ public class MouseClick : MonoBehaviour
             {
                 for (int i = 0; i < salaryNeededValues.Length; i++)
                 {
-                    cityDataText[i].text = textUINames[i] + "£" + salaryNeededValues[i];
+                    cityDataText[i].text = textUINames[i] + " £" + salaryNeededValues[i];
                 }
             }
         }
@@ -127,7 +116,7 @@ public class MouseClick : MonoBehaviour
             {
                 for (int i = 0; i < salaryNeededValues.Length; i++)
                 {
-                    cityDataText[i].text = textUINames[i] + "£" + salaryNeededValues[i];
+                    cityDataText[i].text = textUINames[i] + " £" + salaryNeededValues[i];
                 }
             }
         }
@@ -138,7 +127,7 @@ public class MouseClick : MonoBehaviour
             {
                 for (int i = 0; i < salaryNeededValues.Length; i++)
                 {
-                    cityDataText[i].text = textUINames[i] + "£" + salaryNeededValues[i];
+                    cityDataText[i].text = textUINames[i] + " £" + salaryNeededValues[i];
                 }
             }
         }
@@ -149,7 +138,7 @@ public class MouseClick : MonoBehaviour
             {
                 for (int i = 0; i < salaryNeededValues.Length; i++)
                 {
-                    cityDataText[i].text = textUINames[i] + "£" + salaryNeededValues[i];
+                    cityDataText[i].text = textUINames[i] + " £" + salaryNeededValues[i];
                 }
             }
         }
@@ -160,7 +149,7 @@ public class MouseClick : MonoBehaviour
             {
                 for (int i = 0; i < salaryNeededValues.Length; i++)
                 {
-                    cityDataText[i].text = textUINames[i] + "£" + salaryNeededValues[i];
+                    cityDataText[i].text = textUINames[i] + " £" + salaryNeededValues[i];
                 }
             }
         }
@@ -171,7 +160,7 @@ public class MouseClick : MonoBehaviour
             {
                 for (int i = 0; i < salaryNeededValues.Length; i++)
                 {
-                    cityDataText[i].text = textUINames[i] + "£" + salaryNeededValues[i];
+                    cityDataText[i].text = textUINames[i] + " £" + salaryNeededValues[i];
                 }
             }
         }
