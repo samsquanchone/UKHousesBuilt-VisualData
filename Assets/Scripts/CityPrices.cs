@@ -5,4 +5,5 @@ using UnityEngine;
 public class CityPrices : MonoBehaviour
 {
    public CityData cityData;
+   
 }

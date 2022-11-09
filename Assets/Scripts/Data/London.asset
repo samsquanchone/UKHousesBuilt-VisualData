@@ -16,3 +16,4 @@ MonoBehaviour:
     list: []
     keyCollision: 0
   dataIndex: 2
+  citySalaryNeededDictionaryName: salaryNeededLondon

@@ -8,10 +8,11 @@ public class DataManager : MonoBehaviour
     public static DataManager instance => m_Instance;
     private static DataManager m_Instance; 
     
+    //General house price by reigion 2010-2011 dictionary
     public GenericDictionary<int, float[]> houseDevelopedByRegion;
     public GenericDictionary<int, float[]> housePriceByRegion;
 
-
+    //Salary Needed for each house type 2010-2020 dictionaries (For each city)
     public GenericDictionary<int, float[]> salaryNeededLeicester;
     public GenericDictionary<int, float[]> salaryNeededCambridge;
     public GenericDictionary<int, float[]> salaryNeededNewcastle;

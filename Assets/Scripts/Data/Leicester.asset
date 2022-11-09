@@ -15,3 +15,5 @@ MonoBehaviour:
   cityDataByYear:
     list: []
     keyCollision: 0
+  dataIndex: 0
+  citySalaryNeededDictionaryName: salaryNeededLeicester
