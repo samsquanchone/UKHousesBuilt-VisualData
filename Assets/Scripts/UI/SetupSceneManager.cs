@@ -49,7 +49,7 @@ public class SetupSceneManager : MonoBehaviour
         else 
         {
             max_salary_int = Mathf.Clamp(max_salary_int, 100000, 1000000);
-            input_max_salary.text = min_salary_int.ToString();
+            input_max_salary.text = max_salary_int.ToString();
         }
        
         if (float.TryParse(input_max_population.text, out float max_population_int) != true)
