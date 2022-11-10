@@ -42,7 +42,7 @@ public class PopulationMigration : MonoBehaviour
 
         if (DataManager.instance.salariesPerCity[PopulationSpawn.Instance.cities.IndexOf(cityObj)].TryGetValue(year, out salaryPerHouseTypes))
         {
-            for (int j = salaryPerHouseTypes.Length - 1; j > 0; --j)
+            for (int j = salaryPerHouseTypes.Length - 1; j >= 0; --j)
             {
                 if (this.GetComponent<PersonData>().salary > salaryPerHouseTypes[j])
                 {
