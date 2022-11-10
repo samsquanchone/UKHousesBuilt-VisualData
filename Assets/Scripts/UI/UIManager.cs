@@ -28,7 +28,8 @@ public class UIManager : MonoBehaviour
     public void StartSimulation()
     {
         yearSlider.value = 2010;
-        
+
+        CancelInvoke();
         InvokeRepeating("Timer", 5.0f, 5.0f);
        
     }
