@@ -5,8 +5,8 @@ using UnityEngine;
 public class CameraControl : MonoBehaviour
 {
     // Start is called before the first frame update
-    private float speed = 50f;
-    private float sensitivity = 2f;
+    private float speed = 1f;
+    private float sensitivity = 1f;
     private Vector3 newPosition = Vector3.zero;
     private float smoothFactor = 0.05f;
     private float zoomInLimit = 4f;
@@ -29,19 +29,19 @@ public class CameraControl : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            newPosition += (new Vector3(-speed * Time.deltaTime, 0, 0));
+            newPosition += (new Vector3(-speed * transform.position.y * Time.deltaTime, 0, 0));
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            newPosition += (new Vector3(speed * Time.deltaTime, 0, 0));
+            newPosition += (new Vector3(speed * transform.position.y * Time.deltaTime, 0, 0));
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            newPosition += (new Vector3(0, 0, speed * Time.deltaTime));
+            newPosition += (new Vector3(0, 0, speed * transform.position.y * Time.deltaTime));
         }
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            newPosition += (new Vector3(0, 0, -speed * Time.deltaTime));
+            newPosition += (new Vector3(0, 0, -speed * transform.position.y * Time.deltaTime));
         }
         newPosition += new Vector3(0, Input.mouseScrollDelta.y * sensitivity, 0);
         //if (Input.mouseScrollDelta.y != 0)
