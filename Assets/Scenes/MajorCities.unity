@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.18017578, g: 0.18017578, b: 0.18017578, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -146,12 +146,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 10833569}
-  m_LocalRotation: {x: -0.03213102, y: 0.7063774, z: -0.69866174, w: 0.10895149}
-  m_LocalPosition: {x: 2.0804787, y: 4.6928997, z: 0.32597327}
+  m_LocalRotation: {x: -0, y: -0, z: 0.0000000037252899, w: 1}
+  m_LocalPosition: {x: 1.5938778, y: 13.081106, z: 7.3398266}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 543450652562926956}
+  m_Father: {fileID: 664821693}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &11868116
@@ -3331,6 +3331,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 664821693}
+  - component: {fileID: 664821694}
   m_Layer: 0
   m_Name: === Map ===
   m_TagString: Untagged
@@ -3353,9 +3354,37 @@ Transform:
   - {fileID: 700445601}
   - {fileID: 543450652562926956}
   - {fileID: 703857248}
+  - {fileID: 10833570}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &664821694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664821692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9572197ce65a334cb3173a060c9ccf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfMigrators: 72
+  personPrefab: {fileID: 4290269232189933931, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
+  spawnObj: {fileID: 10833569}
+  cities:
+  - {fileID: 1801800285}
+  - {fileID: 1054385963}
+  - {fileID: 1679652120}
+  - {fileID: 12690974}
+  - {fileID: 507079231}
+  - {fileID: 1481660897}
+  - {fileID: 2116244325}
+  - {fileID: 2028785999}
+  - {fileID: 1851072339}
+  population: []
+  year: 2010
 --- !u!1 &684308801
 GameObject:
   m_ObjectHideFlags: 0
@@ -7203,13 +7232,13 @@ MonoBehaviour:
   m_MinValue: 2010
   m_MaxValue: 2020
   m_WholeNumbers: 1
-  m_Value: 2010
+  m_Value: 2015
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 641880666}
-        m_TargetAssemblyTypeName: MouseClick, Assembly-CSharp
-        m_MethodName: SetYear
+      - m_Target: {fileID: 664821694}
+        m_TargetAssemblyTypeName: PopulationSpawn, Assembly-CSharp
+        m_MethodName: MigratePopluation
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10068,6 +10097,7 @@ MonoBehaviour:
   salaryNeededLeeds:
     list: []
     keyCollision: 0
+  salariesPerCity: []
 --- !u!4 &1723580989
 Transform:
   m_ObjectHideFlags: 0
@@ -13377,19 +13407,6 @@ MonoBehaviour:
   display_max_population: {fileID: 1190165357}
   minSalary: 0
   maxSalary: 0
-  spawnObj: {fileID: 10833569}
-  numberOfMigrators: 36
-  personPrefab: {fileID: 4290269232189933931, guid: 0bf94744935f845448ee70e09ec740b4, type: 3}
-  cities:
-  - {fileID: 1801800285}
-  - {fileID: 1054385963}
-  - {fileID: 1679652120}
-  - {fileID: 12690974}
-  - {fileID: 507079231}
-  - {fileID: 1481660897}
-  - {fileID: 2116244325}
-  - {fileID: 2028785999}
-  - {fileID: 1851072339}
 --- !u!4 &2114364304
 Transform:
   m_ObjectHideFlags: 0
@@ -13571,7 +13588,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2862973771488511327}
-  - {fileID: 10833570}
   m_Father: {fileID: 664821693}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 83.741, y: -90.001, z: 78.531}
