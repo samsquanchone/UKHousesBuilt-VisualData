@@ -23,6 +23,7 @@ public class DataManager : MonoBehaviour
     public GenericDictionary<int, float[]> salaryNeededBirmingham;
     public GenericDictionary<int, float[]> salaryNeededLeeds;
 
+    public List<GenericDictionary<int, float[]>> salariesPerCity = new List<GenericDictionary<int, float[]>>();
 
     private float[] values;
 
@@ -41,8 +42,25 @@ public class DataManager : MonoBehaviour
         LoadDataFromFile(salaryNeededManchester, "Manchester-SalaryNeeded.csv");
         LoadDataFromFile(salaryNeededBirmingham, "Birmingham-SalaryNeeded.csv");
         LoadDataFromFile(salaryNeededLeeds, "Leeds-SalaryNeeded.csv");
+
+        SetDictionaryLists();
     }
-    
+
+    [ContextMenu("set Dictionary Lists")]
+    private void SetDictionaryLists()
+    {
+        salariesPerCity.Clear();
+        salariesPerCity.Add(salaryNeededLondon);
+        salariesPerCity.Add(salaryNeededCambridge);
+        salariesPerCity.Add(salaryNeededLeicester);
+        salariesPerCity.Add(salaryNeededBristol);
+        salariesPerCity.Add(salaryNeededNewcastle);
+        salariesPerCity.Add(salaryNeededLeeds);
+        salariesPerCity.Add(salaryNeededManchester);
+        salariesPerCity.Add(salaryNeededBirmingham);
+        salariesPerCity.Add(salaryNeededBrighton);
+    }
+
 
     StreamReader sr;
     private void LoadDataFromFile(GenericDictionary<int, float[]> dictionary, string fileName)

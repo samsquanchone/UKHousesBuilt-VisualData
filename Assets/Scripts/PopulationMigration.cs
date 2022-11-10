@@ -16,6 +16,8 @@ public class PopulationMigration : MonoBehaviour
     [SerializeField] private NavMeshAgent agent;
     private PersonData info;
 
+    //[SerializeField] private PopulationSpawn pop;
+
     void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -34,24 +36,29 @@ public class PopulationMigration : MonoBehaviour
         agent.destination = goal.position;
     }
 
-    public void Migrate()
+    public void Migrate(int year)
     {
-        // if person can no longer to afford to stay
-        if(info.salary < 100 /*cityObj.GetComponent<CityData>().cityDataByYear*/)
-        {
-            // check against each hosue type x 4
+        float[] salaryPerHouseTypes;
 
-            // loop through each house type
-            foreach (var suburb in cityObj.GetComponent<City>().suburbs)
+        if (DataManager.instance.salariesPerCity[PopulationSpawn.Instance.cities.IndexOf(cityObj)].TryGetValue(year, out salaryPerHouseTypes))
+        {
+            for (int j = salaryPerHouseTypes.Length - 1; j >= 0; --j)
             {
-                // if house is within price range
-                if(info.salary > 10 /* suburb.cost */)
+                if (this.GetComponent<PersonData>().salary > salaryPerHouseTypes[j])
                 {
-                    // migrate to property
-                    SetGoal(suburb);
+                    City city = cityObj.GetComponent<City>();
+                    this.GetComponent<PopulationMigration>().SetGoal(city.suburbs[j]);
+                    //housing = true;
+                    break;
                 }
             }
         }
+
+        /*if (!housing)
+        {
+            Debug.Log("person: " + i + " cannot afford housing");
+            person.GetComponent<PopulationMigration>().SetGoal(spawnObj);
+        }*/
     }
 
     void Update()
