@@ -14,21 +14,23 @@ public class UIManager : MonoBehaviour
         
     }
 
-    IEnumerator Timer()
+    void Timer()
     {
-        if (yearSlider.value <= 2020)
-        {
+        Debug.Log("yooo");
             yearSlider.value = yearSlider.value + 1;
 
-            yield return new WaitForSeconds(5f);
+            
 
-            Timer();
-        }
+           
+        
     }
 
     public void StartSimulation()
     {
+        yearSlider.value = 2010;
         
+        InvokeRepeating("Timer", 5.0f, 5.0f);
+       
     }
     public void ResetScene()
     {
