@@ -35,8 +35,8 @@ public class MouseClick : MonoBehaviour
                 if (hit.transform.CompareTag("City"))
                 {
                     Debug.Log(hit.transform.name);
-                    
-                   
+
+                    CameraControl.Instance.FocusOn(hit.transform);
                     if (DataManager.instance.housePriceByRegion.TryGetValue((int)setYear, out price))
                     {
                         //Send values of objects data script, as well as dictionary values for the current year to the SetCityDataUI function

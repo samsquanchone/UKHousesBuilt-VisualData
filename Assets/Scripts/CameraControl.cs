@@ -12,6 +12,12 @@ public class CameraControl : MonoBehaviour
     private float zoomInLimit = 4f;
     private float zoomOutLimit = 22f;
 
+    public static CameraControl Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
     //public Transform cube;
     void Start()
     {
@@ -38,14 +44,14 @@ public class CameraControl : MonoBehaviour
             newPosition += (new Vector3(0, 0, -speed * Time.deltaTime));
         }
         newPosition += new Vector3(0, Input.mouseScrollDelta.y * sensitivity, 0);
-        if (Input.mouseScrollDelta.y != 0)
-            newPosition.y = Mathf.Clamp(newPosition.y, zoomOutLimit, zoomInLimit);
+        //if (Input.mouseScrollDelta.y != 0)
+            newPosition.y = Mathf.Clamp(newPosition.y, zoomInLimit, zoomOutLimit);
         transform.position = Vector3.Lerp(transform.position, newPosition, smoothFactor);
     }
 
     public void FocusOn(Transform t)
     {
-        newPosition = new Vector3(t.position.x, t.position.y, 4f);
+        newPosition = new Vector3(t.position.x, zoomInLimit, t.position.z);
     }
 
     //void Test()
