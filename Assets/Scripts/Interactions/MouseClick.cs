@@ -16,6 +16,11 @@ public class MouseClick : MonoBehaviour
     public TMP_Text personNameText;
     public TMP_Text personSalaryText;
     public TMP_Text yearText;
+    public static MouseClick Instance;
+    private void Awake()
+    {
+        Instance=this;
+    }
 
     [SerializeField] private string[] textUINames;
    

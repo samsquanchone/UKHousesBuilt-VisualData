@@ -89,6 +89,8 @@ public class PopulationSpawn : MonoBehaviour
     [ContextMenu("Migrate Population")]
     public void MigratePopluation(float year)
     {
+        MouseClick.Instance.SetYear(year);
+
         foreach (var person in population)
         {
             person.GetComponent<PopulationMigration>().Migrate((int)year);

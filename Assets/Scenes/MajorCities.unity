@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18017578, g: 0.18017578, b: 0.18017578, a: 1}
+  m_IndirectSpecularColor: {r: 0.17980957, g: 0.17980957, b: 0.17980957, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7233,7 +7233,7 @@ MonoBehaviour:
   m_MinValue: 2010
   m_MaxValue: 2020
   m_WholeNumbers: 1
-  m_Value: 2015
+  m_Value: 2010
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
