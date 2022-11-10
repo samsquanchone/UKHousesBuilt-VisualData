@@ -3153,6 +3153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47613f05406c1ba438c28f571cb2a96c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  yearSlider: {fileID: 1257018548}
 --- !u!1 &653356735
 GameObject:
   m_ObjectHideFlags: 0
