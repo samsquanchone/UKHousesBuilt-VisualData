@@ -16,13 +16,9 @@ public class UIManager : MonoBehaviour
 
     void Timer()
     {
-        Debug.Log("yooo");
-            yearSlider.value = yearSlider.value + 1;
+       
+        yearSlider.value = yearSlider.value + 1;
 
-            
-
-           
-        
     }
 
     public void StartSimulation()
@@ -32,6 +28,11 @@ public class UIManager : MonoBehaviour
         CancelInvoke();
         InvokeRepeating("Timer", 5.0f, 5.0f);
        
+    }
+
+    public void PauseSmiulation()
+    {
+        CancelInvoke();
     }
     public void ResetScene()
     {

@@ -135,6 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37ec1d57916ec844da4e70168e70c238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cityObj: {fileID: 0}
   migrationPoints:
   - {fileID: 0}
   - {fileID: 0}
