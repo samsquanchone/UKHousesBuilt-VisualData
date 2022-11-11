@@ -7,7 +7,6 @@ using UnityEngine.AI;
 public class PopulationMigration : MonoBehaviour
 {
     public GameObject cityObj;
-    private City city;
     public List<GameObject> migrationPoints = new List<GameObject>();
 
     [SerializeField] private Transform goal = null;
@@ -36,11 +35,17 @@ public class PopulationMigration : MonoBehaviour
         agent.destination = goal.position;
     }
 
+    public GameObject GetGoal()
+    {
+        return goal.gameObject;
+    }
+
     public void Migrate(int year)
     {
         float[] salaryPerHouseTypes;
 
-        if (DataManager.instance.salariesPerCity[PopulationSpawn.Instance.cities.IndexOf(cityObj)].TryGetValue(year, out salaryPerHouseTypes))
+        bool housing = false;
+        if (DataManager.instance.salariesPerCity[PopulationManager.Instance.cities.IndexOf(cityObj)].TryGetValue(year, out salaryPerHouseTypes))
         {
             for (int j = salaryPerHouseTypes.Length - 1; j >= 0; --j)
             {
@@ -48,17 +53,17 @@ public class PopulationMigration : MonoBehaviour
                 {
                     City city = cityObj.GetComponent<City>();
                     this.GetComponent<PopulationMigration>().SetGoal(city.suburbs[j]);
-                    //housing = true;
+                    housing = true;
                     break;
                 }
             }
         }
 
-        /*if (!housing)
+        if (!housing)
         {
-            Debug.Log("person: " + i + " cannot afford housing");
-            person.GetComponent<PopulationMigration>().SetGoal(spawnObj);
-        }*/
+            //Debug.Log("person: " + i + " cannot afford housing");
+            this.GetComponent<PopulationMigration>().SetGoal(PopulationManager.Instance.spawnObj);
+        }
     }
 
     void Update()

@@ -2,19 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PopulationSpawn : MonoBehaviour
+public class PopulationManager : MonoBehaviour
 {
     [SerializeField] private int numberOfMigrators;
     [SerializeField] private GameObject personPrefab;
-    [SerializeField] private GameObject spawnObj;
+    public GameObject spawnObj;
 
     public List<GameObject> cities = new List<GameObject>();
     public List<GameObject> population = new List<GameObject>();
 
-    [Range(2010,2020)]
-    [SerializeField] private int year;
-
-    public static PopulationSpawn Instance { get; set; }
+    public static PopulationManager Instance { get; set; }
 
     private void Awake()
     {
@@ -41,7 +38,8 @@ public class PopulationSpawn : MonoBehaviour
             //City city = cities[randomCity].GetComponent<City>();
 
             person.GetComponent<PopulationMigration>().cityObj = cities[randomCity];
-            person.GetComponent<PopulationMigration>().SetGoal(person.GetComponent<PopulationMigration>().cityObj);
+            person.GetComponent<PopulationMigration>().Migrate(2010);
+            //person.GetComponent<PopulationMigration>().SetGoal(person.GetComponent<PopulationMigration>().cityObj);
 
             /*bool housing = false;
 

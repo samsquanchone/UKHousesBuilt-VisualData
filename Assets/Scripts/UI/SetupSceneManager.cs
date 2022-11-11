@@ -32,12 +32,26 @@ public class SetupSceneManager : MonoBehaviour
     {
         if (float.TryParse(input_min_salary.text, out float min_salary_int) != true)
         {
+
             return false;
         }
+        else
+        {
+            min_salary_int = Mathf.Clamp(min_salary_int, 30000, 40000);
+            input_min_salary.text = min_salary_int.ToString();
+        }
+
         if (float.TryParse(input_max_salary.text, out float max_salary_int) != true)
         {
             return false;
         }
+
+        else 
+        {
+            max_salary_int = Mathf.Clamp(max_salary_int, 100000, 1000000);
+            input_max_salary.text = max_salary_int.ToString();
+        }
+       
         if (float.TryParse(input_max_population.text, out float max_population_int) != true)
         {
             return false;
