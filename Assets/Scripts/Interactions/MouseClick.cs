@@ -15,8 +15,12 @@ public class MouseClick : MonoBehaviour
 
     public TMP_Text personNameText;
     public TMP_Text personSalaryText;
+    public TMP_Text personHouseText;
+
     public TMP_Text yearText;
+
     public static MouseClick Instance;
+
     private void Awake()
     {
         Instance=this;
@@ -55,7 +59,7 @@ public class MouseClick : MonoBehaviour
                 //If the object that is hit by ray is of tag "Person" send the personData script variable values to the SetPersonDataUI function
                 else if (hit.transform.CompareTag("Person"))
                 {
-                    SetPersonDataUI(hit.transform.gameObject.GetComponent<PersonData>().personName, hit.transform.gameObject.GetComponent<PersonData>().salary);
+                    SetPersonDataUI(hit.transform.gameObject.GetComponent<PersonData>().personName, hit.transform.gameObject.GetComponent<PersonData>().salary, hit.transform.gameObject.GetComponent<PopulationMigration>().GetGoal());
                 }
             }
         }
@@ -188,10 +192,11 @@ public class MouseClick : MonoBehaviour
 
     }
 
-    void SetPersonDataUI(string name, float salary)
+    void SetPersonDataUI(string name, float salary, GameObject houseType)
     {
         personNameText.text = name;
-        personSalaryText.text = "£" + salary;
+        personSalaryText.text = "Salary: £" + salary;
+        personHouseText.text = "Housing: " + houseType.name;
     }
 
 }
