@@ -68,6 +68,7 @@ public class SetupSceneManager : MonoBehaviour
         }
         else
         {
+            AudioEventSystem.TriggerEvent("SetUpSceneEnterSFX", null);
             max_population = input_max_population.text;
             min_salary = input_min_salary.text;
             max_salary = input_max_salary.text;

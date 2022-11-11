@@ -44,6 +44,13 @@ public class DataManager : MonoBehaviour
         LoadDataFromFile(salaryNeededLeeds, "Leeds-SalaryNeeded.csv");
 
         SetDictionaryLists();
+
+        AudioEventSystem.TriggerEvent("StartCityLoop", null); //Start city ambience loop
+    }
+
+    void Start()
+    {
+        
     }
 
     [ContextMenu("set Dictionary Lists")]

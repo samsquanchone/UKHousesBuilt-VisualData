@@ -80,6 +80,8 @@ public class MouseClick : MonoBehaviour
         cityText.text = cityName;
         cityAvrgPriceText.text = "Average house price: " + "£" + averageValues[averageValuesIndex];
 
+        AudioEventSystem.TriggerEvent("CitySelectedSFX", null);
+
         //Compare string variable name of city hit by ray to the dictionary name for the cities salary needed dictionary, then supply UI values based off the dictionary values for the current year
         if (cityDictionaryName == "salaryNeededLeicester")
         {
@@ -197,6 +199,7 @@ public class MouseClick : MonoBehaviour
         personNameText.text = name;
         personSalaryText.text = "Salary: £" + salary;
         personHouseText.text = "Housing: " + houseType.name;
+        AudioEventSystem.TriggerEvent("PersonSelectedSFX", null);
     }
 
 }

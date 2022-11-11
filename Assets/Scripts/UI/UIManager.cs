@@ -23,6 +23,7 @@ public class UIManager : MonoBehaviour
 
     public void StartSimulation()
     {
+        AudioEventSystem.TriggerEvent("SimulatePressedSFX", null);
         yearSlider.value = 2010;
 
         CancelInvoke();
@@ -36,7 +37,7 @@ public class UIManager : MonoBehaviour
     }
     public void ResetScene()
     {
-
+        AudioEventSystem.TriggerEvent("StopCityLoop", null);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
