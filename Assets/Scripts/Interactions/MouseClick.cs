@@ -72,7 +72,7 @@ public class MouseClick : MonoBehaviour
         
         yearText.text = year.ToString();
         setYear = year;
-        Debug.Log(year);
+        //Debug.Log(year);
     }
 
     void SetCityDataUI(string cityName, float[] averageValues, int averageValuesIndex, string cityDictionaryName)

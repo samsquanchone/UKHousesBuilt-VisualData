@@ -560,7 +560,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: 'This project uses housing price statistical data to visualize the migration
-    of people within 9 regions of the England over 10year period. Enter the salary
+    of people within the 9 regions of England over a 10 year period. Enter the salary
     and population data to simulate. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2557,6 +2557,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 290794199}
   - {fileID: 1967913371}
   - {fileID: 1912044369}
   - {fileID: 10336764}
@@ -2564,7 +2565,6 @@ RectTransform:
   - {fileID: 842472281}
   - {fileID: 166268469}
   - {fileID: 1720239421}
-  - {fileID: 290794199}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
