@@ -13,9 +13,10 @@ public class MouseClick : MonoBehaviour
     public TMP_Text cityText;
     public TMP_Text cityAvrgPriceText;
 
-    public TMP_Text personNameText;
-    public TMP_Text personSalaryText;
-    public TMP_Text personHouseText;
+    [SerializeField] private TMP_Text personNameText;
+    [SerializeField] private TMP_Text personSalaryText;
+    [SerializeField] private TMP_Text personCityText;
+    [SerializeField] private TMP_Text personHouseText;
 
     public TMP_Text yearText;
 
@@ -59,7 +60,7 @@ public class MouseClick : MonoBehaviour
                 //If the object that is hit by ray is of tag "Person" send the personData script variable values to the SetPersonDataUI function
                 else if (hit.transform.CompareTag("Person"))
                 {
-                    SetPersonDataUI(hit.transform.gameObject.GetComponent<PersonData>().personName, hit.transform.gameObject.GetComponent<PersonData>().salary, hit.transform.gameObject.GetComponent<PopulationMigration>().GetGoal());
+                    SetPersonDataUI(hit.transform.gameObject.GetComponent<PersonData>().personName, hit.transform.gameObject.GetComponent<PersonData>().salary, hit.transform.gameObject.GetComponent<PopulationMigration>().cityObj, hit.transform.gameObject.GetComponent<PopulationMigration>().GetGoal());
                 }
             }
         }
@@ -71,7 +72,7 @@ public class MouseClick : MonoBehaviour
         
         yearText.text = year.ToString();
         setYear = year;
-        Debug.Log(year);
+        //Debug.Log(year);
     }
 
     void SetCityDataUI(string cityName, float[] averageValues, int averageValuesIndex, string cityDictionaryName)
@@ -79,6 +80,8 @@ public class MouseClick : MonoBehaviour
         float[] salaryNeededValues;
         cityText.text = cityName;
         cityAvrgPriceText.text = "Average house price: " + "£" + averageValues[averageValuesIndex];
+
+        AudioEventSystem.TriggerEvent("CitySelectedSFX", null);
 
         //Compare string variable name of city hit by ray to the dictionary name for the cities salary needed dictionary, then supply UI values based off the dictionary values for the current year
         if (cityDictionaryName == "salaryNeededLeicester")
@@ -192,11 +195,13 @@ public class MouseClick : MonoBehaviour
 
     }
 
-    void SetPersonDataUI(string name, float salary, GameObject houseType)
+    void SetPersonDataUI(string name, float salary, GameObject city, GameObject houseType)
     {
         personNameText.text = name;
         personSalaryText.text = "Salary: £" + salary;
+        personCityText.text = "City of origin: " + city.name;
         personHouseText.text = "Housing: " + houseType.name;
+        AudioEventSystem.TriggerEvent("PersonSelectedSFX", null);
     }
 
 }

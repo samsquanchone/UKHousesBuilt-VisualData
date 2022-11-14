@@ -26,6 +26,7 @@ public class PopulationMigration : MonoBehaviour
     private void Start()
     {
         migrationPoints.Clear();
+        
         //Migrate();
     }
 

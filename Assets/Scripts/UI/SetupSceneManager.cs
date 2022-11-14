@@ -45,17 +45,16 @@ public class SetupSceneManager : MonoBehaviour
         {
             return false;
         }
-
         else 
         {
             max_salary_int = Mathf.Clamp(max_salary_int, 100000, 1000000);
             input_max_salary.text = max_salary_int.ToString();
         }
        
-        if (float.TryParse(input_max_population.text, out float max_population_int) != true)
+        /*if (float.TryParse(input_max_population.text, out float max_population_int) != true)
         {
             return false;
-        }
+        }*/
 
         return true;
     }
@@ -68,6 +67,7 @@ public class SetupSceneManager : MonoBehaviour
         }
         else
         {
+            AudioEventSystem.TriggerEvent("SetUpSceneEnterSFX", null);
             max_population = input_max_population.text;
             min_salary = input_min_salary.text;
             max_salary = input_max_salary.text;

@@ -44,6 +44,13 @@ public class DataManager : MonoBehaviour
         LoadDataFromFile(salaryNeededLeeds, "Leeds-SalaryNeeded.csv");
 
         SetDictionaryLists();
+
+        AudioEventSystem.TriggerEvent("StartCityLoop", null); //Start city ambience loop
+    }
+
+    void Start()
+    {
+        
     }
 
     [ContextMenu("set Dictionary Lists")]
@@ -67,14 +74,14 @@ public class DataManager : MonoBehaviour
     {
         //Dictionary<int, float[]> countryHousingDictionary = new Dictionary<int, float[]>();
         string path = (Application.streamingAssetsPath + "/" + fileName);
-        Debug.Log(path);
+        //Debug.Log(path);
         if (sr != null)
             sr.Close();
         sr = new StreamReader(path);
         while (!sr.EndOfStream)
         {
             string line = sr.ReadLine();
-            Debug.Log("LINE :: " + line);
+            //Debug.Log("LINE :: " + line);
             if (!string.IsNullOrEmpty(line))
             {
                 string[] values = line.Split(',');
@@ -93,7 +100,7 @@ public class DataManager : MonoBehaviour
                     floatList.Clear();
                 }
             }
-            Debug.Log("DICTIONARY :: " + dictionary.Count);
+            //Debug.Log("DICTIONARY :: " + dictionary.Count);
         }
         sr.Close();
     }

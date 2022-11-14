@@ -88,7 +88,7 @@ public class PopulationManager : MonoBehaviour
     public void MigratePopluation(float year)
     {
         MouseClick.Instance.SetYear(year);
-
+        AudioEventSystem.TriggerEvent("SliderMovedSFX", null);
         foreach (var person in population)
         {
             person.GetComponent<PopulationMigration>().Migrate((int)year);

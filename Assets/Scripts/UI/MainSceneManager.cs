@@ -20,7 +20,7 @@ public class MainSceneManager : MonoBehaviour
         minSalary = float.Parse(SetupSceneManager.ssmInstance.min_salary);
         maxSalary = float.Parse(SetupSceneManager.ssmInstance.max_salary);
 
-        Debug.Log("MinSal: " +  minSalary + "MaxSal: " + maxSalary);
+        //Debug.Log("MinSal: " +  minSalary + "MaxSal: " + maxSalary);
     }
 
     private void Start()
