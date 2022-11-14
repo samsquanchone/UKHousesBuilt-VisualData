@@ -48,16 +48,24 @@ public class Suburb : MonoBehaviour
         sprite = this.GetComponent<SpriteRenderer>();
         yearSlider.onValueChanged.AddListener(delegate { OnYearChange(); });
 
+        // HOUSE PRICES
         List<float> housePrices = new List<float>();
-        for (int year = 2010; year <= 2020; year++)
+        for (int cityIndex = 0; cityIndex < DataManager.instance.salariesPerCity.Count; cityIndex++)
         {
-            float[] salaryPerHouseTypes;
-            if (DataManager.instance.salariesPerCity[this.GetComponentInParent<City>().cityIndex].TryGetValue(year, out salaryPerHouseTypes))
+            for (int yearIndex = 2010; yearIndex <= 2020; yearIndex++)
             {
-                housePrices.Add(salaryPerHouseTypes[(int)houseType]);
+                float[] salaryPerHouseTypes;
+                if (DataManager.instance.salariesPerCity[cityIndex].TryGetValue(yearIndex, out salaryPerHouseTypes))
+                {
+                    for (int houseTypeIndex = 0; houseTypeIndex < salaryPerHouseTypes.Length; houseTypeIndex++)
+                    {
+                        housePrices.Add(salaryPerHouseTypes[houseTypeIndex]);
+                    }
+                }
             }
         }
 
+        // MIN HOUSE PRICE
         minHousePrice = housePrices[0];
         for (int i = 0; i < housePrices.Count; i++)
         {
@@ -67,6 +75,7 @@ public class Suburb : MonoBehaviour
             }
         }
 
+        // MAX HOUSE PRICE
         maxHousePrice = housePrices[0];
         for (int i = 0; i < housePrices.Count; i++)
         {
