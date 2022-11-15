@@ -451,6 +451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c00479b25d70540b68af9d3d696020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cityIndex: 3
   suburbDistance: 2
   suburbPrefab: {fileID: 3691551173343600882, guid: 9f4bd7212cf4e8b4bbaa5cd3fe30f0ff, type: 3}
   suburbs:
@@ -504,7 +505,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 1
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!212 &31063900
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1116,7 +1121,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 289, y: -392}
+  m_AnchoredPosition: {x: -209.4, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &272383339
@@ -1461,7 +1466,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 2
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!4 &286952339
 Transform:
   m_ObjectHideFlags: 0
@@ -1575,7 +1584,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 1
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!212 &291192362
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2012,7 +2025,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 1
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!212 &351578696
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2649,6 +2666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c00479b25d70540b68af9d3d696020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cityIndex: 4
   suburbDistance: 2
   suburbPrefab: {fileID: 3691551173343600882, guid: 9f4bd7212cf4e8b4bbaa5cd3fe30f0ff, type: 3}
   suburbs:
@@ -2902,7 +2920,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 2
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!212 &550483592
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3793,7 +3815,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 1
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!212 &684308804
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4712,7 +4738,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 1
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!212 &795371062
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4811,7 +4841,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 0
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!212 &828369703
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5079,7 +5113,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 0
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!212 &855721040
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5355,7 +5393,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 0
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!212 &865112867
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5476,7 +5518,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 0
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!4 &912789539
 Transform:
   m_ObjectHideFlags: 0
@@ -5590,7 +5636,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 1
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!212 &912995377
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5689,7 +5739,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 0
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!212 &952360966
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5788,7 +5842,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 2
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!212 &953226844
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5887,7 +5945,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 1
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!212 &981417763
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6440,6 +6502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c00479b25d70540b68af9d3d696020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cityIndex: 1
   suburbDistance: 2
   suburbPrefab: {fileID: 3691551173343600882, guid: 9f4bd7212cf4e8b4bbaa5cd3fe30f0ff, type: 3}
   suburbs:
@@ -6493,7 +6556,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 3
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!212 &1079483180
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6930,7 +6997,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 3
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!212 &1144105700
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7029,7 +7100,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 2
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!212 &1148982790
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7567,7 +7642,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 3
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!212 &1179040891
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9263,7 +9342,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 2
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!212 &1432009700
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9521,6 +9604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c00479b25d70540b68af9d3d696020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cityIndex: 5
   suburbDistance: 2
   suburbPrefab: {fileID: 3691551173343600882, guid: 9f4bd7212cf4e8b4bbaa5cd3fe30f0ff, type: 3}
   suburbs:
@@ -9574,7 +9658,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 2
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!212 &1520022907
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9673,7 +9761,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 2
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!212 &1532910237
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9757,7 +9849,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 1
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!4 &1550690564
 Transform:
   m_ObjectHideFlags: 0
@@ -9871,7 +9967,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 0
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!212 &1573125359
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10624,6 +10724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c00479b25d70540b68af9d3d696020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cityIndex: 2
   suburbDistance: 2
   suburbPrefab: {fileID: 3691551173343600882, guid: 9f4bd7212cf4e8b4bbaa5cd3fe30f0ff, type: 3}
   suburbs:
@@ -10677,7 +10778,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 2
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!212 &1681867057
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10776,7 +10881,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 3
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!212 &1702363119
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10875,7 +10984,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 3
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!212 &1707929521
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11390,7 +11503,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 0
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!212 &1732562232
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11894,7 +12011,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 3
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!212 &1796074111
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12075,6 +12196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c00479b25d70540b68af9d3d696020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cityIndex: 0
   suburbDistance: 2
   suburbPrefab: {fileID: 3691551173343600882, guid: 9f4bd7212cf4e8b4bbaa5cd3fe30f0ff, type: 3}
   suburbs:
@@ -12263,7 +12385,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 3
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!212 &1823013249
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12362,7 +12488,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 2
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!212 &1823326908
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12461,7 +12591,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 0
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!212 &1829686193
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12811,6 +12945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c00479b25d70540b68af9d3d696020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cityIndex: 8
   suburbDistance: 2
   suburbPrefab: {fileID: 3691551173343600882, guid: 9f4bd7212cf4e8b4bbaa5cd3fe30f0ff, type: 3}
   suburbs:
@@ -12864,7 +12999,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 1
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!212 &1890823525
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13740,7 +13879,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 0
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!212 &2015620879
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14090,6 +14233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c00479b25d70540b68af9d3d696020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cityIndex: 7
   suburbDistance: 2
   suburbPrefab: {fileID: 3691551173343600882, guid: 9f4bd7212cf4e8b4bbaa5cd3fe30f0ff, type: 3}
   suburbs:
@@ -14567,7 +14711,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 3
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!4 &2080767582
 Transform:
   m_ObjectHideFlags: 0
@@ -14875,7 +15023,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseType: 3
+  minHousePrice: 0
+  maxHousePrice: 0
   housePrice: 0
+  sprite: {fileID: 0}
+  yearSlider: {fileID: 1257018548}
 --- !u!212 &2088346753
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15272,6 +15424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c00479b25d70540b68af9d3d696020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cityIndex: 6
   suburbDistance: 2
   suburbPrefab: {fileID: 3691551173343600882, guid: 9f4bd7212cf4e8b4bbaa5cd3fe30f0ff, type: 3}
   suburbs:

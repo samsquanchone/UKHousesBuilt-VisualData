@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class City : MonoBehaviour
 {
+    public int cityIndex;
+
     [SerializeField] private float suburbDistance = 2;
     [SerializeField] private GameObject suburbPrefab;
     public List<GameObject> suburbs = new List<GameObject>();
