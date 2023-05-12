@@ -40,4 +40,10 @@ public class UIManager : MonoBehaviour
         AudioEventSystem.TriggerEvent("StopCityLoop", null);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
 }
